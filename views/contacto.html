@@ -28,7 +28,7 @@
             </div>
 
             <label for="check-menu" class="label-check">
-                <img src="./../assets/images/icons/menu-svgrepo-com.svg" alt="icono menu hamburgesa" width="50" height="50">
+                <img src="./../assets/images/icons/menu.svg" alt="icono menu hamburgesa" width="50" height="50">
             </label>
         </div>
     </header>
@@ -45,97 +45,95 @@
             
         <section class="contenido">
             <h2>¿En qué podemos ayudarle?</h2>
-            <div class="container">
-                <div class="location">
-                    <div class="redes">
-                        <a href="https://www.facebook.com/tapiceriaMD.Marbella/" target="_blank"><img src="./../assets/images/icons/facebook-logo.svg" alt="logo facebook" width="30" height="30"></a>
-                        <a href="https://www.instagram.com/tiptop_marbella/" target="_blank"><img src="./../assets/images/icons/instagram-logo.svg" alt="logo instagram" width="30" height="30"></a>
-                        <a href="https://g.co/kgs/Lr5aoFv" target="_blank"><img src="./../assets/images/icons/google-svgrepo.svg" alt="logo google" width="30" height="30"></a>
+            <div class="formulario">           
+                <form id="form">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <div class="datos">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" placeholder="Nombre completo">
+                            <span>*</span>         
+                        </div>
+                        <span class="error" id="nombreError"></span> 
+                        
+                        <div class="datos">
+                            <label for="apellido">Apellidos:</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Apellidos completos">   
+                            <span>*</span>
+                        </div>
+                        <span class="error" id="apellidoError"></span> 
+
+                        <div class="datos">
+                            <label for="telephone">Teléfono:</label>
+                            <input type="text" id="telephone" name="telephone" placeholder="Telefono">
+                            <span>*</span>
+                        </div>
+                        <span class="error" id="telefonoError"></span> 
+
+                        <div class="datos">
+                            <label for="email">E-mail:</label>
+                            <input type="text" id="email" name="email" placeholder="Correo electronico">
+                            <span>*</span> 
+                        </div>
+                        <span class="error" id="emailError"></span>
+                        <span class="campos-obligatorios"> (*) Los campos marcados con asterisco son obligatorios.</span>       
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Mensaje</legend>
+                        <textarea name="mensaje" id="message" rows="5" placeholder="Escribe tu mensaje"></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Aceptacíon de  condiciones</legend>
+                        <div class="aceptar">
+                        <label for="aceptar">He leído y acepto las condiciones </label>
+                        <input type="checkbox" id="aceptar" class ="aceptar">
+                        <span class="error" id="no-aceptado"></span>
+                        </div>
+                    </fieldset>
+
+                    <div class="botones">
+                        <button type="submit" id="submit">Enviar
+                        </button>
+
+                        <button type="reset" id="reset">Borrar
+                            </button>
+
                     </div>
-                    <h4>HORARIO DE ATENCIÓN</h4>
-                    <p>De Lunes a Viernes</p>
-                    <p>de 9:00 a 13:45 y de 15:00 a 18:00</p> 
-                    <p> Sábados y Domingo CERRADO
-                    </p>
-                    <h4>WHATSAPP</h4>
-                    <p>(+34) 603 849 757</p>
-                    <h4>E-MAIL</h4>
-                    <a href="mailto:tiptoptapiceria@gmail.com">tiptoptapiceria@gmail.com</a>   
+                    <p id="mensaje-error" class="error"></p>
+                    <p id="mensaje" class="mensaje"></p>
+                </form>
+            </div>
+        </section>
+        <section class="container">
+            <div class="horario">
+                <h4>HORARIO DE ATENCIÓN</h4>
+                <p>De Lunes a Viernes</p>
+                <p>de 9:00 a 13:45 y de 15:00 a 18:00</p> 
+                <p> Sábados y Domingo CERRADO</p>
+            </div>
+            <div class="contacto">
+                <div class="direccion">
                     <h4>DIRECCIÓN</h4>
                     <p>C. Diamante, 37, Pol. Ind. "La Ermita"</p> 
                     <p>29603, Marbella, Málaga, España</p>
-                    <a href="https://maps.app.goo.gl/1nyGeTP441d4KmiH8" target="_blank" class="button-link" style="color: black; font-size: medium;">COMO LLEGAR</a>
-                </div>   
-                
-                <div class="formulario-contacto">
-                    
-                    <form id="form">
-                        <fieldset>
-                            <legend>Datos personales</legend>
-                            <div class="datos">
-                                <label for="name">Nombre:</label>
-                                <input type="text" id="name" name="name" placeholder="Nombre completo">
-                                <span>*</span>         
-                            </div>
-                            <span class="error" id="nombreError"></span> 
-                            
-                            <div class="datos">
-                                <label for="apellido">Apellidos:</label>
-                                <input type="text" id="apellido" name="apellido" placeholder="Apellidos completos">   
-                                <span>*</span>
-                            </div>
-                            <span class="error" id="apellidoError"></span> 
-
-                            <div class="datos">
-                                <label for="telephone">Teléfono:</label>
-                                <input type="text" id="telephone" name="telephone" placeholder="Telefono">
-                                <span>*</span>
-                            </div>
-                            <span class="error" id="telefonoError"></span> 
-
-                            <div class="datos">
-                                <label for="email">E-mail:</label>
-                                <input type="text" id="email" name="email" placeholder="Correo electronico">
-                                <span>*</span> 
-                            </div>
-                            <span class="error" id="emailError"></span>
-                            <span class="campos-obligatorios"> (*) Los campos marcados con asterisco son obligatorios.</span>       
-                        </fieldset>
-                        
-                        <fieldset>
-                            <legend>Mensaje</legend>
-                            <textarea name="mensaje" id="message" rows="5" placeholder="Escribe tu mensaje"></textarea>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Aceptacíon de  condiciones</legend>
-                            <div class="aceptar">
-                            <label for="aceptar">He leído y acepto las condiciones </label>
-                            <input type="checkbox" id="aceptar" class ="aceptar">
-                            <span class="error" id="no-aceptado"></span>
-                            </div>
-                        </fieldset>
-
-                        <div class="botones">
-                            <button type="submit" id="submit">Enviar
-                            </button>
-
-                            <button type="reset" id="reset">Borrar
-                                </button>
-
-                        </div>
-                        <p id="mensaje-error" class="error"></p>
-                        <p id="mensaje" class="mensaje"></p>
-                    </form>
                 </div>
-            </div>
+                <div class="movil">         
+                    <img src="./../assets/images/icons/whatsapp.svg" alt="whatsapp logo" width="40" height="40">
+                    <span>(+34) 603 849 757</span>
+                <div class="correo">
+                    <img src="./../assets/images/icons/email.svg" alt="email logo" width="50" height="50">
+                    <a href="mailto:tiptoptapiceria@gmail.com">tiptoptapiceria@gmail.com</a>
+                </div>
+            </div>   
         </section>
                 
         <div>
             <h2>Localización</h2>
             <h4>VISITA NUESTRAS INSTALACIONES</h4>
             <hr>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.6513957949824!2d-4.872217790050994!3d36.514276272214644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72d9f653f75841%3A0x589be46774dcb69e!2sTipTop%20Tapicer%C3%ADa!5e0!3m2!1ses!2ses!4v1742337614005!5m2!1ses!2ses" width="1000" height="600" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           
         </div>
         <div class="whatsapp">
             <a href="https://wa.me/34603849757" target="_blank"><img src="./../assets/images/icons/whatsapp-green.svg" alt="whatsapp" width="60" height="60"></a>

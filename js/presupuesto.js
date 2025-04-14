@@ -26,8 +26,6 @@ const phoneInput = document.getElementById("telephone");
 const emailInput = document.getElementById("email");
 const aceptar = document.getElementById ("aceptar");
 const form = document.getElementById("form");
-const btnBorrar = document.getElementById ("vaciar");
-
 
 
 function vaciarForm() {
@@ -142,7 +140,7 @@ const elementTotal = document.getElementById("total")
 
 function calcularTotal() {
 
-    if (servicioSelect.notselected === true || servicioSelect.value == 0) {
+    if (servicioSelect.value == 0) {
             servicioSelect.classList.add("invalido");
             servicioSelect.classList.remove("valido");
             document.getElementById("noSelected").textContent = "No hay servicio seleccionado";

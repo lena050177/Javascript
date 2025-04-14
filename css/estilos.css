@@ -37,19 +37,20 @@ header.nav-scroll {
 }
 
 .logo {
+    justify-content: left;
     width: 130px;
     height: 110px;
-    border-radius: 5px;
+    border-radius: 25px;
     box-shadow: 3px 3px 3px rgb(171, 170, 170);
     object-fit: cover;
 }
 
 h1 {
-    padding-left: 100px;
-    font-size: clamp(20px, 3vw, 50px);
+    font-size: clamp(15px, 3vw, 50px);
     color: white;
     font-weight: bolder;
     letter-spacing: 5px;
+    text-align: center;
 }
 /* ---------------------------------------------------------------- -
 ---------------------------------- Navbar -------------------------
@@ -157,49 +158,95 @@ h4 {
     font-size: clamp(15px, 2vw, 20px)
 }
 
-/* -------------------------------------------------------------
------------------------ Formulario contacto ------------------------
-----------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- INICIO ----------------------------------------------------- */
+.containerI {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items:baseline;
+}
 
-.formulario1 {
+.direccion {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    line-height: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(15px, 2vw, 20px);
+}
+.button-link {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    align-items: center;   
+    text-align: center;
+    width: 160px;
+    height: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black; 
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+}
+
+.google-maps {
+    margin-right: 30px;
+    
+}
+
+/* -------------------------------------------------------------
+----------------------- Formulario ------------------------
+----------------------------------------------------------------*/
+
+.formulario {
+    max-width: 80%;
     margin: 0 auto;
     padding: 30px;
     border: 5px double black;
-    border-radius: 10px;
-    line-height: 10px; 
+    border-radius: 5px;
+    line-height: 50px; 
+    font-size: clamp(14px, 2vw, 17px); 
     background-color: rgba(249, 249, 249, 0.894); 
 }
-.formulario1 fieldset {
+
+.formulario fieldset {
+    max-width: 95%;
     border: 2px solid rgb(103, 103, 103);
     padding: 10px 10px; 
-    margin: 10px auto;    
+    margin: 30px auto;    
 }
-.formulario1 legend {
+.formulario legend {
+    position: relative;
     font-weight: bold;
     color: rgb(54, 54, 54);
-    font-size: clamp(16px, 3vw, 18px);
-    margin: 0 10px;
+    font-size: clamp(17px, 3vw, 20px);
+    margin: 0 20px;
     padding: 0 10px;
-    line-height: 10px;
+    line-height: 15px;
 }
 .datos {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-    margin: 20px auto;  
+    margin: 10px;
+    font-weight: bold; 
+}
+.datos label {
+    display: inline-block;
+    width: 20%;
+    margin-left: 5px;
 }
 .datos input {
     padding: 10px;
-    width: 80%; 
-    font-size: 15px;
+    width: 70%; 
+    font-size: clamp(14px, 2vw, 17px); 
     border: 1px solid rgb(205, 203, 203);
     border-radius: 5px;
 }
-.campos-obligatorios {
+.nota {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,13 +254,8 @@ h4 {
     color: grey; 
     font-style: italic;
 }
-.formulario1 input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin: 0 30px;
-    cursor: pointer; 
-}
-.formulario1 textarea {
+
+.formulario textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -221,14 +263,33 @@ h4 {
     border-radius: 5px;
     font-size: 15px;
 }
-.terminos {
+.aceptar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 50px;
-    padding: 20px;
+    text-align: center;
+    font-size: clamp(14px, 2vw, 17px); 
+}
 
+.error, 
+.noSelected {
+    color: red;
+    font-size: clamp(10px, 2vw, 15px);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.invalido {
+    border: 3px solid red;
+   
+}
+.mensaje {
+    color: green;
+    font-size: clamp(10px, 2vw, 15px);
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .botones {
     display: flex;
@@ -252,39 +313,6 @@ h4 {
     background-color: rgb(192, 56, 7);
     color: white;
     border: 1px solid black;
-}
-
-.error {
-    color: red;
-    font-size: clamp(10px, 2vw, 15px);
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-.form-control.error {
-    border-color: red;  
-}
-
-.form-control.valido {
-    border-color: rgb(205, 203, 203);
-}
-.mensaje {
-    color: green;
-    font-size: clamp(10px, 2vw, 15px);
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-
-.direccion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: clamp(15px, 2vw, 20px);
-
 }
 
 /* ------------------------------------------------------- NOTICIAS ------------------------------------------- */
@@ -342,64 +370,68 @@ footer a:hover {
     height: 30px;
     box-shadow: 2px 2px 2px black;
 }
+
 /*----------------- Pagina CONTACTO --------------------------------------------*/
 
 .container {
     display: grid;
-    grid-template-columns: 40% 60%;
-    margin: 20px auto;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px auto;
+    max-width: 70%;
     justify-content: space-around;
     align-items: center;
+    gap: 10px;
 }
-.location {
+.horario {
     display: flex;
     flex-direction: column;
-    margin: 30px auto;
-    padding: 30px 80px;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    color: white;
+    margin: 0 auto;
+    padding: 30px 100px;
+    gap: 10px;
+    color: black;
     text-align: center;
-    background-color: rgb(35, 35, 35);
+    line-height: 30px;
+    font-size: clamp(14px, 2vw, 22px);
     border: black;
     border-radius: 10px;
     box-shadow: 3px 2px 3px black;
 }
-.location p {
-    font-size: clamp(14px, 2vw, 18px);
-    text-align: center;
-    line-height: 35px;
-}
-.location a {
-    text-decoration: none;
-    color: white;
-    font-size: clamp(14px, 2vw, 18px);
-}
-.button-link {
+.contacto {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    align-items: center;   
-    text-align: center;
-    width: 160px;
-    height: 50px;
-    text-decoration: none;
-    color: black;
-    font-size: 13px;
-    font-weight: bold;
-    background-color: white;
-    border: 1px solid black; 
-    border-radius: 10px;
-    box-shadow: 3px 3px 3px black;
-}
-iframe {
-    width: 85%;
-    margin: 0px auto;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 8%;
+    margin: 0 auto;
+    padding: 10px 100px;
+    gap: 30px;
+    color: black;
+    text-align: center;
+    font-size: clamp(14px, 2vw, 20px);
+    border: black;
+    border-radius: 10px;
+    box-shadow: 3px 2px 3px black;
 }
+.movil {
+    padding: 10px;
+    gap: 10px;
+}
+.correo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 5px;
+}
+
+.correo a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(14px, 2vw, 20px);
+    cursor: pointer;
+}
+
 /*---------------------------------------------------------- Pagina GALERIA ---------------------------------------------------------*/
 
 .text-servicio {
@@ -463,44 +495,12 @@ iframe {
 }
 
 /*---------------------------------------------------------- Pagina PRESUPUESTO ---------------------------------------------------------*/
-.presupuesto {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    min-height: 100vh;
-    padding: 20px;  
-}
+
 .p-presupuesto {
    margin-bottom: 20px;
    padding: 20px;
    font-size: clamp(17px, 3vw, 20px);
    text-align: center;
-}
-.formulario {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    padding: 30px;
-    border: 5px double black;
-    border-radius: 5px;
-    line-height: 50px; 
-    background-color: rgba(249, 249, 249, 0.894); 
-}
-.formulario fieldset {
-    position: relative;
-    width: 100%;
-    border: 2px solid rgb(103, 103, 103);
-    padding: 10px 10px; 
-    margin: 30px auto;    
-}
-.formulario legend {
-    position: relative;
-    font-weight: bold;
-    color: rgb(54, 54, 54);
-    font-size: clamp(17px, 3vw, 20px);
-    margin: 0 20px;
-    padding: 0 10px;
-    line-height: 15px;
 }
 .servicio {
     display: flex;
@@ -516,14 +516,14 @@ iframe {
     margin-bottom: 15px;
     border: 1px solid rgb(205, 203, 203);
     border-radius: 5px; 
-    font-size: 15px;  
+    font-size: clamp(14px, 2vw, 17px);  
 }
 .plazo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
     gap: 10px; 
 }
 .plazo input {
@@ -531,24 +531,23 @@ iframe {
     padding: 10px;
     border: 1px solid rgb(205, 203, 203);
     border-radius: 5px; 
-    font-size: 15px;  
+    font-size: clamp(14px, 2vw, 17px);   
 }
 .extras {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    margin: 20px auto;
-    gap: 5px;
-    line-height: 20px;
+    margin: 0 auto;
+    margin: 30px;
+    font-size: clamp(14px, 2vw, 17px); 
 }
-.extras input[type="checkbox"] {
+input[type="checkbox"] {
     width: 20px;
     height: 20px;
     margin: 0 30px;
     cursor: pointer; 
 }
-.presupuestoTotal {
+.presupuesto-total {
     display: flex;
     align-items: center;
     text-align: center;
@@ -565,6 +564,7 @@ iframe {
     text-align: center;
     font-weight: bold; 
     font-size: clamp(13px, 2vw, 16px); 
+    color: black;
 }
 .iva {
     color: rgb(51, 51, 51); 
@@ -573,36 +573,7 @@ iframe {
     font-size: clamp(13px, 2vw, 17px); 
     padding: 0 20px;
 }
-.presupuestoNota {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: rgb(31, 31, 31); 
-    font-style: italic; 
-    line-height: 20px;
-    font-size: clamp(13px, 2vw, 17px); 
-}
-.aceptacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: clamp(14px, 2vw, 17px);
-    line-height: 20px;
-    list-style: none;
-    padding: 15px 0px 5px 0px;
-    gap: 10px;
-    color: black;  
-}
-.aceptacion input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin: 0 30px;
-    cursor: pointer; 
-}
+
 
 /*--------------------------------------------
 ----------------- Responsive ------------------
@@ -610,32 +581,25 @@ iframe {
 
 @media (max-width: 1024px) {
 
-    .logo img {
+    .logo {
         width: 70px;
-        height: 70px;
+        height: 60px;
     }
-    .contacto {
-        display: none;
-    }
+    
     .label-check {
         display: block; 
         margin: 0 auto;
         justify-content: center;
-        padding: 7px;
-        background-color: rgba(0, 0, 0, 0.915);
-        border-radius: 100px;
+        padding: 10px;
     }
-
     .nav-links {
         display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: absolute;
-        right: 30%;
-        gap: 0;
-        width: 40%;
-        height: 200%;
+        right: 37%;
+        margin-top: 60px;   
         border-radius: 10px;
         background-color: rgba(11, 11, 11, 0.741);
         text-shadow: none;
@@ -648,6 +612,13 @@ iframe {
     }
     .check-menu:checked + .nav-links {
         display: flex;
+    }
+    .containerI {
+        grid-template-columns: 1fr;
+        margin: 10px auto;
+    }
+    .google-maps {
+        display: none;
     }
     .container {
         grid-template-columns: 1fr;
@@ -670,29 +641,8 @@ iframe {
 }    
 
  @media (max-width: 768px) {
-    .galeria {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-    }
-    .galeria img:hover {
-        transform:none;
-    } 
-    .productos {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(24, 1fr);
-        gap: 10px;
-    }
-    .producto {
-        margin: 0 auto;
-        width: 90%;
-    }
-    
-  
-    }
     .formulario {
-        width: 100%;
+        min-width: 100%;
         padding: 10px;
     }
     .extras {
@@ -706,6 +656,7 @@ iframe {
     .botones {
         margin-bottom: 20px;
     }
+}
 
 
 

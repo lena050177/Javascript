@@ -22,7 +22,19 @@ const phoneInput = document.getElementById("telephone");
 const emailInput = document.getElementById("email");
 const aceptar = document.getElementById ("aceptar");
 const form = document.getElementById ("form")
+const btnBorrar = document.getElementById ("vaciar");
 
+
+
+function vaciarForm() {
+    document.getElementById("nombreError").textContent = "";
+    document.getElementById("apellidoError").textContent = "";
+    document.getElementById("telefonoError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("mensaje-error").textContent = "";
+    document.getElementById ("no-aceptado").textContent = ""
+    document.getElementById ("form").reset();
+}
 
 function validarNombre() {
 
