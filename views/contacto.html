@@ -110,13 +110,13 @@
             <div class="horario">
                 <h4>HORARIO DE ATENCIÓN</h4>
                 <p>De Lunes a Viernes</p>
-                <p>de 9:00 a 13:45 y de 15:00 a 18:00</p> 
-                <p> Sábados y Domingo CERRADO</p>
+                <p>de 9:00 a 13:45 <br>y de 15:00 a 18:00</p><br> 
+                <p> Sábados y Domingo <br>CERRADO</p>
             </div>
             <div class="contacto">
                 <div class="direccion">
                     <h4>DIRECCIÓN</h4>
-                    <p>C. Diamante, 37, Pol. Ind. "La Ermita"</p> 
+                    <p>C. Diamante, 37,<br> Pol. Ind. "La Ermita"</p> 
                     <p>29603, Marbella, Málaga, España</p>
                 </div>
                 <div class="movil">         
@@ -128,13 +128,19 @@
                 </div>
             </div>   
         </section>
-                
-        <div>
+
+        <section>
             <h2>Localización</h2>
             <h4>VISITA NUESTRAS INSTALACIONES</h4>
             <hr>
-           
-        </div>
+            <div id="google">
+                <div id="how-arrive">
+                    <button class="how-arrive">¿Cómo llegar?</button>  
+                </div>   
+                <div id="map"></div>
+                <div id="panel"></div>
+            </div>
+        </section>  
         <div class="whatsapp">
             <a href="https://wa.me/34603849757" target="_blank"><img src="./../assets/images/icons/whatsapp-green.svg" alt="whatsapp" width="60" height="60"></a>
         </div>
@@ -162,6 +168,11 @@
             </div>
         </div>
     </footer>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0vJgQQNMi99iS3l2oUS7m8UOfLb8Lu_o&callback=initMap"
+      defer
+    ></script>
     <script src="./../js/script.js"></script>
+    <script src="./../js/mapa.js"></script>
 </body>
 </html>
