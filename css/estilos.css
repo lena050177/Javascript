@@ -46,7 +46,7 @@ header.nav-scroll {
 }
 
 h1 {
-    font-size: clamp(15px, 3vw, 50px);
+    font-size: clamp(14px, 4vw, 90px);
     color: white;
     font-weight: bolder;
     letter-spacing: 5px;
@@ -195,8 +195,7 @@ h4 {
 }
 
 .google-maps {
-    margin-right: 30px;
-    
+    margin-right: 30px;  
 }
 
 /* -------------------------------------------------------------
@@ -280,9 +279,8 @@ h4 {
     justify-content: center;
     align-items: center; 
 }
-.invalido {
-    border: 3px solid red;
-   
+input.invalido, select.invalido {
+    border: 3px solid red;  
 }
 .mensaje {
     color: green;
@@ -461,7 +459,7 @@ footer a:hover {
     border: black;
     cursor: pointer;  
     text-transform: uppercase;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family:sans-serif;
     font-size: 13px;
     font-weight: bold;
     padding: 5px;
@@ -493,43 +491,33 @@ footer a:hover {
 .text-servicio {
     text-transform: uppercase;
     color: black;
-    text-shadow: 2px 2px 2px white;
     padding: 50px;
-    font-size: 30px; 
-    transform: scale(0.5);
+    transform: scaleX(0.2);
     opacity: 0;
-    transition: all 2s ease-in-out;   
+    transition: all 1.5s ease-in-out;   
 }
-
 .text-servicio.show {
-    transform: scale(1.5);
+    transform: scaleX(1);
     opacity: 1;
-    transition: all 2s ease-in-out;
+    transition: all 1.5s ease-in-out;
+    text-shadow: 2px 2px 2px white;
 }
-.content-galeria {
-    width: 100%;
-    max-width: 800px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-.galeria {
-    max-width: 800px;
+.galeria { 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+    margin: 20px auto;
     align-items: center;
-    gap: 50px;  
     background-color: black;
 }
 .image {
-    display: block;
-    width: 400px;
-    height: 250px;
     object-fit: cover;
+    width: 600px;
+    height: 380px;
+    margin: 30px;
+    margin-left: 50px;
     border: 6px solid white;
     transform: translateY(50px);
-    transition: all 2s ease-in-out; 
+    transition: all 1.5s ease-in-out; 
     opacity: 0;    
 }
 .image.show {
@@ -537,28 +525,7 @@ footer a:hover {
     transition: all 2s ease-in-out;  
     opacity: 1; 
 }
-.image img {
-    width: 400px;
-    height: 250px;
-    object-fit: cover; 
-    border-radius: 20px;
-}
-.image:hover {
-    filter: grayscale(1);
-    cursor: pointer;  
-}
-.descripcion {
-    background-color: rgba(255, 255, 255, 0.718);
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    transform: translateY(-130px);
-    opacity: 0;   
-}
-.descripcion:hover {
-    opacity: 1;
-}
+
 
 /*---------------------------------------------------------- Pagina PRESUPUESTO ---------------------------------------------------------*/
 
@@ -623,7 +590,7 @@ input[type="checkbox"] {
     margin: 50px auto;    
 }
 .total {
-    border: 1px solid rgb(95, 95, 95); 
+    border: 1px solid rgb(174, 174, 174); 
     border-radius: 5px;
     margin-left: 20px;
     padding: 10px;
@@ -631,6 +598,7 @@ input[type="checkbox"] {
     font-weight: bold; 
     font-size: clamp(13px, 2vw, 16px); 
     color: black;
+    background-color: white;
 }
 .iva {
     color: rgb(51, 51, 51); 

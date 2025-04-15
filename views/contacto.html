@@ -46,7 +46,7 @@
         <section class="contenido">
             <h2>¿En qué podemos ayudarle?</h2>
             <div class="formulario">           
-                <form id="form">
+                <form id="form" form id="form" action="#" method="post" target="_blank">
                     <fieldset>
                         <legend>Datos personales</legend>
                         <div class="datos">
@@ -97,9 +97,8 @@
                         <button type="submit" id="submit">Enviar
                         </button>
 
-                        <button type="reset" id="reset">Borrar
+                        <button type="reset" onclick="vaciarForm()">Borrar
                             </button>
-
                     </div>
                     <p id="mensaje-error" class="error"></p>
                     <p id="mensaje" class="mensaje"></p>
