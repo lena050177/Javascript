@@ -1,11 +1,11 @@
 $(function() {
     $('#slides').slidesjs({
-      width: 710,
-      height: 263,
+      width: 910,
+      height: 463,
       play: {
         active: true,
         auto: true,
-        interval: 3000,
+        interval: 6000,
         swap: true
       }
     });
