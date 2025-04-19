@@ -2,13 +2,17 @@
 // Scroll de header
 
 const navbar = document.querySelector (".navbar")
+const logo = document.querySelector (".logo")
 
 function scrollNavbar () {
 
-    if (window.scrollY < 400) {
-        navbar.classList.remove ("nav-scroll")
+    if (window.scrollY < 300) {
+        navbar.classList.remove ("nav-scroll");
+        logo.classList.add ("logo-scroll");
     } else {
-        navbar.classList.add ("nav-scroll")
+        navbar.classList.add ("nav-scroll");
+        logo.classList.remove ("logo-scroll")
+        ;
     }
 };
 
