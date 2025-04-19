@@ -19,7 +19,7 @@ body {
 header {
     position: fixed;
     display: flex;
-    z-index: 10;
+    z-index: 100;
     min-width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -189,10 +189,12 @@ h4 {
     margin: 30px auto;
     justify-content: center;
     align-items: center;
+    gap: 30px;
 }
 .containerS ul {
     list-style: disc;
     line-height: 50px;
+    
 
 }
 
@@ -323,7 +325,13 @@ input.invalido, select.invalido {
 /*----------------------------------------------------- SLIDER ---------------------------*/
 
 #slides {
-    display: none
+    display: none;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: arial;
+    border-radius: 5px 5px 5px 5px;
+    border: 3px solid #000000;   
+    background-color:white;
   }
 
   #slides .slidesjs-navigation {
@@ -334,7 +342,7 @@ input.invalido, select.invalido {
   a.slidesjs-previous,
   a.slidesjs-play,
   a.slidesjs-stop {
-    background-image: url(img/btns-next-prev.png);
+    background-image: url(./../assets/images/btns-next-prev.png);
     background-repeat: no-repeat;
     display:block;
     width:12px;
@@ -396,7 +404,7 @@ input.invalido, select.invalido {
     width: 13px;
     height: 0;
     padding-top: 13px;
-    background-image: url(img/pagination.png);
+    background-image: url(./../assets/images/pagination.png);
     background-position: 0 0;
     float: left;
     overflow: hidden;
@@ -432,6 +440,7 @@ input.invalido, select.invalido {
     position: fixed;
     bottom: 200px;
     right: 5px;
+    z-index: 98;
 }
 
 
