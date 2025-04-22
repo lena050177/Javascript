@@ -22,7 +22,7 @@ window.addEventListener ("scroll", scrollNavbar )
 const elements = document.querySelectorAll(".image, .text-top, .text-servicio")
 
 function mostrarElements() {
-    const altura = window.innerHeight * 0.5
+    const altura = window.innerHeight * 0.6
 
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;

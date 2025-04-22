@@ -130,7 +130,7 @@ h4 {
     transform: scale(1.2);
 }
 .contenido {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     
 }
@@ -185,30 +185,30 @@ h4 {
 }
 .containerS {
     width: 100%;
+    height: auto;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(2 1fr);
     justify-content: space-between;
-    gap: 20px;
-    align-items: center;
     margin: 30px auto; 
     background-color: black;
+    mask-image: linear-gradient(rgba(190,190,190,1) 95%, transparent);
+    filter: drop-shadow(0px 8px 4px rgba(190,190,190,1));
 }
 .servicios {
     display: flex;
-    margin-left: 0;
+    font-size: clamp(8px, 1vw, 18px);
     color: white;
     justify-content: start;
-    align-items: center;
-    transform: perspective(1500px) translate3d(15px, 0, 10px) rotateY(-30deg);
+    align-items: center;  
 }
-
 .servicios ul {
     font-weight: bolder;
-    font-size: clamp(10px, 2vw, 25px);
     flex-wrap: wrap;
     list-style: none;
     line-height: 50px;
-    text-shadow: 1px 1px 1px black;
+    letter-spacing: 5px;
+    list-style: square;
 }
 
 /* -------------------------------------------------------------
@@ -244,20 +244,19 @@ h4 {
 .datos {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 5px;
     width: 100%;
     margin: 5px;
     font-weight: bold; 
 }
 .datos label {
     display: inline-block;
-    width: 20%;
-    margin-left: 3px;
+    width: 30%;
 }
 .datos input {
     padding: 10px;
     width: 60%; 
-    font-size: clamp(14px, 2vw, 17px); 
+    font-size: clamp(12px, 2vw, 17px); 
     border: 1px solid rgb(205, 203, 203);
     border-radius: 5px;
 }
@@ -525,10 +524,11 @@ footer a{
 /*----------------- Pagina CONTACTO --------------------------------------------*/
 
 .container {
-    width: 85%;
+    width: 75%;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    margin: 0px auto;
+    margin: 20px auto;
+    gap: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -545,9 +545,11 @@ footer a{
     text-align: center;
     line-height: 35px;
     font-size: clamp(20px, 2vw, 22px);
+    border: 3px solid black;
     background-image: linear-gradient(to right, white, rgb(199, 199, 199));
     box-shadow: 3px 2px 3px black;
-    transform: scale(.7);
+    transform: perspective(1500px) translate3d(15px, 0, 10px) rotateY(20deg);
+    
     transition: all 1s ease-in-out;
 }
 .contacto {
@@ -562,10 +564,11 @@ footer a{
     line-height: 35px;
     color: black;
     text-align: center;
+    border: 3px solid black;
     background-image: linear-gradient(to right, white, rgb(199, 199, 199));
     font-size: clamp(20px, 2vw, 22px);
     box-shadow: 3px 2px 3px black;
-    transform: scale(.7);
+    transform: perspective(1500px) translate3d(15px, 0, 10px) rotateY(-20deg);
     transition: all 1s ease-in-out;
 }
 .movil {
@@ -664,7 +667,7 @@ footer a{
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 10px auto;
+    margin: 0px auto;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -692,7 +695,7 @@ footer a{
 .p-presupuesto {
    margin-bottom: 20px;
    padding: 20px;
-   font-size: clamp(17px, 3vw, 20px);
+   font-size: clamp(15px, 2vw, 20px);
    text-align: center;
 }
 .servicio {
@@ -729,7 +732,7 @@ footer a{
     padding: 10px;
     border: 1px solid rgb(205, 203, 203);
     border-radius: 5px; 
-    font-size: clamp(14px, 2vw, 17px);   
+    font-size: clamp(12px, 2vw, 17px);   
 }
 .extras {
     display: inline-block;
@@ -754,8 +757,7 @@ input[type="checkbox"] {
     font-weight: bold;
     margin: 50px auto;    
 }
-.total {
-   
+.total {   
     border-radius: 5px;    
     padding: 10px;
     text-align: center;
@@ -780,7 +782,6 @@ input[type="checkbox"] {
 @media (max-width: 1024px) {
     .navbar {
         display: flex;
-        align-items: flex-start;
         margin: 0 auto;
         height: 90px;
     }
@@ -790,8 +791,9 @@ input[type="checkbox"] {
         height: 85px;
     }
     h1 {    
-        margin-top: 15px;
+        top: 0px;
         padding: 0px;
+        font-size: 20px;
     }    
     .label-check {
         display: block; 
@@ -803,14 +805,39 @@ input[type="checkbox"] {
         top: 75%;
         right: 0;
         gap: 20px;
-       
+        left: 10px;
         width: 100%;
         justify-content: center;
         align-items: center;
-    }        
+    } 
+    h2 {
+        padding: 10px;
+    }     
     .check-menu:checked + .nav-links {
         display: flex;
     }
+  
+    .carusel {
+        width: 400px;
+    }
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+
+      margin-left: 50px;
+    }
+    .slidesjs-pagination li a {
+        display: flex;
+        margin-right: 35px;
+    }
+    .servicios ul {
+        font-weight: bolder;
+        flex-wrap: wrap;
+        list-style: none;
+        line-height: 20px;
+        list-style: square;
+    } 
     .formulario {
         max-width: 95%;
     }
@@ -826,7 +853,7 @@ input[type="checkbox"] {
     .image {
         width: 400px;
         height: 280px; 
-        margin: 25px 15px; 
+        margin: 25px auto; 
     }  
 }
 
@@ -835,25 +862,26 @@ input[type="checkbox"] {
     .navbar {
         display: flex;
         align-items: start;
-       
+        gap: 0;
         height: 60px;
     }
     .logo {
         top: 0px;
-        width: 80px;
+        width: 70px;
         height: 55px;
     }
     h1 {
         letter-spacing: 1px;
-        margin-top: 10px;
+        margin-top: 15px;
+        font-size: 12px;
     }
     .nav-links {
         display: none;
         position: absolute;
         top: 70%;
-        
-       
-        margin-right: 0px;
+        right: 0;
+        gap: 3px;
+        padding: 0px;
         width: 100%;
         justify-content: center;
     }
@@ -863,17 +891,7 @@ input[type="checkbox"] {
         padding: 3px;
      
     }
-    .carusel {
-        width: 500px;
-        margin: 0 auto;
-        margin-left: 20px;
-        padding-bottom: 10px;
-        border-radius: 3px 3px 3px 3px;
-        border: 10px solid #000000;
-        color: transparent;
-        background-color:rgba(252, 251, 251, 0.869);
-        transform: perspective(1500px) translate3d(10px, 0, 20px) rotateY(10deg);
-        }
+     
     .direccion-p {
         margin: 5px auto;
         line-height: 15px;
@@ -902,6 +920,25 @@ input[type="checkbox"] {
         grid-template-columns: 1fr;
         margin: 20px auto;
     }
+    .containerS {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .carusel {
+        width: 350px;
+        margin-left: 0;
+    }
+    .servicios {
+        max-width: 80%;
+        padding: 20px;
+    }
+    .servicios li {
+        transform: none;
+        letter-spacing: 1px;
+    }
     .presupuesto-total {
         display: flex;
         flex-direction: column;
@@ -921,7 +958,7 @@ input[type="checkbox"] {
     .image {
         width: 300px;
         height: 180px; 
-        margin-left: 10px; 
+        margin-left: 50px; 
     }  
     .info {
         display: flex;
