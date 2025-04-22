@@ -12,24 +12,25 @@
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body> 
-    <header class="navbar">  
-        <img class="logo" src="./assets/images/icons/logotip.svg" alt="logo tiptop" width="200" height="200">
-
+    <header class="navbar"> 
+        <div>
+            <img class="logo" src="./assets/images/icons/logotip.svg" alt="logo tiptop" width="200" height="200">
+        </div>
         <div>
             <h1>TAPICERÍA AUTOMÓVIL</h1>
-        </div>        
-        <div>
-            <input type="checkbox" id="check-menu" class="check-menu">
-            <ul class="nav-links">
-                <li><a href="./index.html" >INICIO</a></li>              
-                <li><a href="./views/galeria.html">GALERÍA</a></li>               
-                <li><a href="./views/presupuesto.html" >PRESUPUESTO</a></li>            
-                <li><a href="./views/contacto.html">CONTACTO</a></li> 
-            </ul>            
-            <label for="check-menu" class="label-check">
-                <img src="./assets/images/icons/menu.svg" alt="icono menu hamburgesa" width="50" height="50">
-            </label> 
-        </div>      
+        </div>
+       
+        <input type="checkbox" id="check-menu" class="check-menu">
+        <ul class="nav-links">
+            <li><a href="./index.html" >INICIO</a></li>              
+            <li><a href="./views/galeria.html">GALERÍA</a></li>               
+            <li><a href="./views/presupuesto.html" >PRESUPUESTO</a></li>            
+            <li><a href="./views/contacto.html">CONTACTO</a></li> 
+        </ul>            
+        <label for="check-menu" class="label-check">
+            <img src="./assets/images/icons/menu.svg" alt="icono menu hamburgesa" width="50" height="50">
+        </label> 
+             
     </header>
 
     <main>
@@ -49,30 +50,31 @@
             </div>
         </section>
    
-        <section class="contenido">
+        <section>
             <h2> 
                 <a href="./views/galeria.html">Nuestros Servicios</a>
             </h2> 
             <hr>  
             <div class="containerS" >        
+            
+                <div class="carusel">
+                    <div id="slides">
+                        <img class="carusel-img" src="./assets/images/galeria/asientosporsche3.jpg" alt="Asientos Porsche restaurados">
+                        <img class="carusel-img" src="./assets/images/galeria/asiento-reparado1.jpg" alt="Asiento reparado">
+                        <img src="./assets/images/galeria/volante1.jpg" alt="Volante">
+                        <img class="carusel-img" src="./assets/images/galeria/volante2.jpg" alt="Volante" width="700" height="400">
+                        <img class="carusel-img" src="./assets/images/galeria/salpicadero-reparado.jpg" alt="Salpicadero reparado"  width="700" height="400">
+                        <img class="carusel-img" src="./assets/images/galeria/asientos-barco2.jpg" alt="Asientos de barco restaurados" width="1600" height="1200">
+                    </div>
+                </div>
                 <div class="servicios">
                     <ul>
-                        <li>DISEÑO DE TAPICERÍA PERSONALIZADO</li>
+                        <li>DISEÑO PERSONALIZADO</li>
                         <li>RESTAURACIÓN DE VOLANTES</li>
                         <li>RECONSTRUCCIÓN DE ASIENTOS</li>
                         <li>REPARACIÓN DE TECHOS</li>
                         <li>TAPIZADO DE BARCOS</li>
                     </ul>
-                </div>
-                <div class="carusel">
-                    <div id="slides">
-                        <img src="./assets/images/galeria/asientosporsche3.jpg" alt="Asientos Porsche restaurados">
-                        <img src="./assets/images/galeria/asiento-reparado1.jpg" alt="Asiento reparado">
-                        <img src="./assets/images/galeria/volante1.jpg" alt="Volante">
-                        <img src="./assets/images/galeria/volante4.jpg" alt="Volante" width="1536" height="1512" style="object-fit: cover;">
-                        <img src="./assets/images/galeria/salpicadero-reparado.jpg" alt="Salpicadero reparado" width="2016" height="1512">
-                        <img src="./assets/images/galeria/asientos-barco2.jpg" alt="Asientos de barco restaurados" width="1600" height="1200">
-                    </div>
                 </div>
             </div>
         </section>
@@ -142,14 +144,13 @@
             <div class="direccion">
                 <h2>Donde estamos:</h2>
                 <hr>
-                <p>C. Diamante, 37</p>
-                <p>Pol. Ind. "La Ermita"</p>  
-                <p>29603, Marbella</p> 
-                <p> Málaga, España</p> 
-                <br><br>
-                
-                    <iframe class="google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.6513957949824!2d-4.872217790050994!3d36.514276272214644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72d9f653f75841%3A0x589be46774dcb69e!2sTipTop%20Tapicer%C3%ADa!5e0!3m2!1ses!2ses!4v1742337614005!5m2!1ses!2ses" width="450" height="590" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                
+                <div class="direccion-p">
+                    <p>C. Diamante, 37</p>
+                    <p>Pol. Ind. "La Ermita"</p>  
+                    <p>29603, Marbella</p> 
+                    <p> Málaga, España</p> 
+                </div>
+                <iframe class="google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.6513957949824!2d-4.872217790050994!3d36.514276272214644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72d9f653f75841%3A0x589be46774dcb69e!2sTipTop%20Tapicer%C3%ADa!5e0!3m2!1ses!2ses!4v1742337614005!5m2!1ses!2ses" width="450" height="590" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>               
             </div>
         </section> 
         <div class="whatsapp">
@@ -180,8 +181,9 @@
         </div>
     </footer>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./js/jquery.slides.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/slider.js"></script>
-    <script src="./js/jquery.slides.min.js"></script>
+    
 </body>
 </html>
