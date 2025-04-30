@@ -11,24 +11,21 @@
     <link rel="stylesheet" href="./../css/estilos.css">
 </head>
 <body> 
-    <header class="navbar">  
+    <header>  
         <img class="logo" src="./../assets/images/icons/logotip.svg" alt="logo tiptop" width="200" height="200">
 
-        <div>
-            <h1>TAPICERÍA AUTOMÓVIL</h1>
-        </div>        
-        <div>
-            <input type="checkbox" id="check-menu" class="check-menu">
-            <ul class="nav-links">
-                <li><a href="./../index.html" >INICIO</a></li>              
-                <li><a href="./../views/galeria.html">GALERÍA</a></li>               
-                <li><a href="./../views/presupuesto.html" >PRESUPUESTO</a></li>            
-                <li><a href="./../views/contacto.html">CONTACTO</a></li> 
-            </ul>            
-            <label for="check-menu" class="label-check">
-                <img src="./../assets/images/icons/menu.svg" alt="icono menu hamburgesa" width="50" height="50">
-            </label> 
-        </div>      
+        <h1>TAPICERÍA AUTOMÓVIL</h1>
+
+        <input type="checkbox" id="check-menu" class="check-menu">
+        <ul class="nav-links">
+            <li><a href="./../index.html" >INICIO</a></li>              
+            <li><a href="./../views/galeria.html">GALERÍA</a></li>               
+            <li><a href="./../views/presupuesto.html" >PRESUPUESTO</a></li>            
+            <li><a href="./../views/contacto.html">CONTACTO</a></li> 
+        </ul>            
+        <label for="check-menu" class="label-check">
+            <img src="./../assets/images/icons/menu.svg" alt="icono menu hamburgesa" width="50" height="50">
+        </label>      
     </header>
 
     <main>
@@ -42,7 +39,20 @@
         </section>
             
         <section>
+
+            <div class="parafo-contacto">
+                <p>En Tip Top Tapicería Marbella, estamos comprometidos a ofrecerte el mejor servicio posible. </p>
+                <p>Si buscas un tapicero de confianza, no dudes en ponerte en contacto con nosotros.</p>
+                <p>Puedes llamarnos o enviarnos un correo electrónico o whatsapp.</p>
+                <p>También puedes rellenar el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                <p>Si lo prefieres, puedes visitarnos en nuestras instalaciones. </p    >
+                <p>Estaremos encantados de atenderte personalmente.</p>
+                <p>¡Esperamos verte pronto!</p>
+            </div>
+           
             <h2>¿En qué podemos ayudarle?</h2>
+            <hr>
+           
             <div class="formulario">           
                 <form id="form" action="#" method="post" target="_blank">
                     <fieldset>
@@ -103,26 +113,28 @@
                 </form>
             </div>
         </section>
-        <section class="container">
+        <section class="container1">
             <div class="horario">
                 <h4>HORARIO DE ATENCIÓN</h4>
+                <hr>
                 <p>De Lunes a Viernes</p>
                 <p>de 9:00 a 13:45 </p>
-                <p>y de 15:00 a 18:00</p><br> 
-                <p> Sábados y Domingo <br>CERRADO</p>
+                <p>y <br><br> de 15:00 a 18:00</p><br>
+                <p> Sábados y Domingo </p>
+                <p>CERRADO</p>
             </div>
-            <div class="contacto">
+            <div class="direccion">
                 <div>
-                    <h4>DIRECCIÓN</h4>
+                    <h4><img src="./../assets/images/galeria/nave.webp" alt="instalaciones" class="inst-foto" width="680" height="404"></h4>
                     <p>C. Diamante, 37</p> <p>Pol. Ind. "La Ermita"</p> 
                     <p>29603, Marbella, Málaga, España</p>
                 </div>
                 <div class="movil">         
-                    <img src="./../assets/images/icons/whatsapp.svg" alt="whatsapp logo" width="40" height="40">
+                    <img src="./../assets/images/icons/whatsapp-white.svg" alt="whatsapp logo" width="20" height="20">
                     <span>(+34) 603 849 757</span>
                 </div>
                 <div class="correo">
-                    <img src="./../assets/images/icons/email.svg" alt="email logo" width="50" height="50">
+                    <img src="./../assets/images/icons/email-white.svg" alt="email logo" width="25" height="25">
                     <a href="mailto:tiptoptapiceria@gmail.com">tiptoptapiceria@gmail.com</a>
                 </div>
             </div>  
@@ -171,7 +183,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0vJgQQNMi99iS3l2oUS7m8UOfLb8Lu_o&callback=initMap"
       defer
     ></script>
-    <script src="./../js/script.js"></script>
+    <script src="./../js/formulario.js"></script>
     <script src="./../js/mapa.js"></script>
 </body>
 </html>

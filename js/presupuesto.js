@@ -2,7 +2,7 @@
 
 /*-------------------- Scroll de header ----------*/
 
-const navbar = document.querySelector (".navbar")
+const navbar = document.querySelector ("header")
 const logo = document.querySelector (".logo")
 
 function scrollNavbar () {
@@ -53,6 +53,8 @@ function validarNombre() {
     let nombre = nameInput.value
     if (nombre === "" || nombre === null) {
         document.getElementById("nombreError").textContent = "El campo está vacío";
+        nameInput.classList.add("invalido");
+        nameInput.classList.remove("valido");
     } else {
         document.getElementById("nombreError").textContent = "";
         let nombrePattern = /^[a-zA-Zñ\s]{1,15}$/;
@@ -71,6 +73,8 @@ function validarApellido() {
     const apellido = apellidoInput.value
     if (apellido === "" || apellido === null) {
         document.getElementById("apellidoError").textContent = "El campo está vacío";
+        apellidoInput.classList.add("invalido");
+        apellidoInput.classList.remove("valido");
     } else {
         document.getElementById("apellidoError").textContent = "";
         const apellidoPattern = /^[a-zA-Zñ\s]{1,40}$/
@@ -90,6 +94,8 @@ function validarTelefono() {
     const telefono = phoneInput.value
     if (telefono === "" || telefono === null) {
         document.getElementById("telefonoError").textContent = "El campo está vacío";
+        phoneInput.classList.add("invalido");
+        phoneInput.classList.remove("valido");
     } else {
         document.getElementById("telefonoError").textContent = "";
         const telefonoPattern = /^[0-9]{9}$/
@@ -109,6 +115,8 @@ function validarEmail() {
     const email = emailInput.value
     if (email === "" || email === null) {
         document.getElementById("emailError").textContent = "El campo está vacío";
+        emailInput.classList.add("invalido");
+        emailInput.classList.remove("valido");
     } else {
         document.getElementById("emailError").textContent = "";
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/

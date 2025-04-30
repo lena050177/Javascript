@@ -47,10 +47,12 @@ function validarNombre() {
     let nombre = nameInput.value
     if (nombre === "" || nombre === null) {
         document.getElementById("nombreError").textContent = "El campo está vacío";
+        nameInput.classList.add("invalido");
+        nameInput.classList.remove("valido");
     } else {
         document.getElementById("nombreError").textContent = "";
         let nombrePattern = /^[a-zA-Zñ\s]{1,15}$/;
-        if (nombrePattern.test(nombre)) {
+        if (nombrePattern.test(nombre)) { 
         nameInput.classList.add("valido");
         nameInput.classList.remove("invalido");
         } else {
@@ -65,6 +67,8 @@ function validarApellido() {
     const apellido = apellidoInput.value
     if (apellido === "" || apellido === null) {
         document.getElementById("apellidoError").textContent = "El campo está vacío";
+        apellidoInput.classList.add("invalido");
+        apellidoInput.classList.remove("valido");
     } else {
         document.getElementById("apellidoError").textContent = "";
         const apellidoPattern = /^[a-zA-Zñ\s]{1,40}$/
@@ -84,6 +88,8 @@ function validarTelefono() {
     const telefono = phoneInput.value
     if (telefono === "" || telefono === null) {
         document.getElementById("telefonoError").textContent = "El campo está vacío";
+        phoneInput.classList.add("invalido");
+        phoneInput.classList.remove("valido");
     } else {
         document.getElementById("telefonoError").textContent = "";
         const telefonoPattern = /^[0-9]{9}$/
@@ -103,6 +109,8 @@ function validarEmail() {
     const email = emailInput.value
     if (email === "" || email === null) {
         document.getElementById("emailError").textContent = "El campo está vacío";
+        emailInput.classList.add("invalido");
+        emailInput.classList.remove("valido");
     } else {
         document.getElementById("emailError").textContent = "";
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -132,5 +140,27 @@ apellidoInput.addEventListener("input", validarApellido);
 phoneInput.addEventListener("input", validarTelefono);
 emailInput.addEventListener("input", validarEmail);
 aceptar.addEventListener("input", validarAceptacion);
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    validarNombre();
+    validarApellido();
+    validarTelefono();
+    validarEmail();
+    validarAceptacion();
+
+    if (nameInput.classList.contains("valido") && apellidoInput.classList.contains("valido") && phoneInput.classList.contains("valido") && emailInput.classList.contains("valido")&& aceptar.checked === true){
+
+        document.getElementById("mensaje").textContent = "Formulario enviado correctamente"; 
+        document.getElementById("mensaje-error").textContent = "";
+        setTimeout(() => {
+            document.getElementById('mensaje').textContent = "";
+        }, 5000)
+
+        document.getElementById("form").reset();
+    } else {
+        document.getElementById("mensaje-error").textContent = "Por favor, corrija los errores en el formulario y acepta los terminos y condiciones";
+    }
+  })
 
 

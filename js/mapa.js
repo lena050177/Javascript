@@ -2,6 +2,7 @@
 let destination = {lat:36.5142763, lng: -4.8696375};
 
 function initMap() {
+
     navigator.geolocation.getCurrentPosition(function(position) {
           
         let origin = new google.maps.LatLng(parseFloat(position.coords.latitude), parseFloat(position.coords.longitude));

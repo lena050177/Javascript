@@ -82,8 +82,8 @@ hr {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    width: 280px;
-    height: 5px;
+    width: 230px;
+    height: 3px;
     margin-bottom: 10px;
 }
 
@@ -105,6 +105,7 @@ h2 {
     font-weight: bolder;
     font-size: clamp(20px, 3vw, 35px);
     letter-spacing: 2px;  
+    line-height: 60px;
 }
 
 h2 a {
@@ -125,13 +126,19 @@ h4 {
     text-align: center;
     padding: 10px;
     font-size: clamp(14px, 2vw, 20px);
-    font-weight: bold;
-    
+    font-weight: bold;  
 }
 .text-top.show {
     text-shadow: 2px 2px 2px rgb(94, 94, 94);
     transition: all 0.9s ease-in-out;
     transform: scale(1.2);
+}
+h6 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: clamp(14px, 2vw, 18px);
+    color: black;
+    font-weight: bold;
 }
 
 /* -------------------------------------------------------------------------- INICIO ----------------------------------------------------- */
@@ -143,13 +150,13 @@ h4 {
     align-items: center;
     margin: 0 auto; 
 }
-.contenido p {
+.nosotros {
     width: 80%;
     margin: 20px auto;
     text-align: justify;
-    text-wrap:break-word;
+    overflow-wrap: break-word;
     padding: 20px;
-    font-size: clamp(10px, 2vw, 18px);
+    font-size: clamp(12px, 2vw, 18px);
     color: black;
 }
 .hero {
@@ -189,52 +196,269 @@ h4 {
     font-size: clamp(20px, 3vw, 35px);
     letter-spacing: 3px; 
 }
-.consejos {
+.servicios hr {
     color: white;
-    gap: 30px;
-    padding: 20px;   
+    width: 280px;
+    height: 5px;
+    margin-bottom: 30px;
 }
-
-#noticias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content:center;
-    align-items: start;
-    text-align:justify;
-    gap: 50px;
-    margin: 20px auto;
-    
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+    border: 1px solid black;
+}
+.carousel-inner {
+    border: 15px solid white;
+    border-radius: 3px;
+}
+.carousel-caption {
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.278);
+    border-radius: 10px;
+}
+.consejos {
+    text-align: justify;
+    color: white;
+    gap: 20px;
+    padding: 15px;
+    font-size: clamp(10px, 2vw, 18px);   
 }
 .noticia {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
     margin: 20px auto;
     padding: 20px;
     background-color: rgb(222, 221, 221);
     border-radius: 3px;
-    box-shadow: 3px 2px 2px black;
-    
+    box-shadow: 3px 2px 2px black;  
 }
-.containerI {
+.noticia p {
+    width: 95%;
+    margin-top: 0;
+    font-size: clamp(12px, 2vw, 16px);
+    color: black;
+}
+.container-contacto {
+    width: 90%;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 40% 60%;
     margin: 20px auto;
     justify-content: center;
-    align-items:baseline;
+    align-items: center;
+    gap: 50px;
 }
-.direccion {
+.info-contacto {
     display: flex;
     flex-direction: column;   
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: clamp(10px, 2vw, 20px);
+    gap: 30px;
+    padding: 32px;
+    color: white;
+    font-size: clamp(12px, 2vw, 20px);
+    line-height: 35px;
+    background: linear-gradient(to right, black, rgb(72, 72, 72));
+    box-shadow: inset 0px 0px 10px black, 0px 0px 10px black;
 }
-.direccion-p {
-    margin: 30px auto;
-    line-height: 50px;
+.info-contacto a {
+    color: white;
+    text-decoration: none;
 }
 .google-maps {
-    width: 95%;  
+   max-width: 80%;
 }
+
+/*------------------------------- Botón WhatsApp ---------------------------------- */
+
+.whatsapp {
+    position: fixed;
+    bottom: 180px;
+    right: 5px;
+    z-index: 98;
+}
+
+
+/* ---------------------------------------------------------------------------Footer---------------------------------------------------------------------------------------*/
+footer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    min-width: 100%;
+    align-items: center;
+    background-image: linear-gradient(#c7c7c7, black);
+    color: white;
+    text-shadow: 1px 1px 3px black ;
+    text-align: center;
+    font-size: clamp(12px, 2vw, 14px);
+} 
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer p {
+    margin: 0;
+    padding: 0;   
+} 
+.pp {
+    margin: 10px auto;
+    color: white;
+    font-weight: normal;
+    font-size: clamp(8px, 2vw, 13px);
+    transition: all .5s ease-in-out;
+}
+.pp a:hover {
+    color:  rgb(192, 56, 7);
+    text-decoration: underline;
+}
+.redes {
+    margin-top: 0px; 
+    padding-top: 0px;  
+}
+.redes img {
+    width: 30px;
+    height: 30px;
+    box-shadow: 2px 2px 2px black;
+}
+.telefono-email {
+    display: flex;
+    gap: 10px;
+}
+.derechos {
+    font-weight: normal;
+    font-size: clamp(10px, 1vw, 12px);
+}
+
+/*---------------------------------------------------------- Pagina GALERIA ---------------------------------------------------------*/
+
+.text-servicio {
+    text-transform: uppercase;
+    color: black;
+    padding: 50px;
+    transform: scaleX(0.2);
+    opacity: 0;
+    transition: all 1.5s ease-in-out;   
+}
+.text-servicio.show {
+    transform: scaleX(1);
+    opacity: 1;
+    transition: all 1.5s ease-in-out;
+    text-shadow: 2px 2px 2px white;
+}
+.galeria { 
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: black;
+}
+.image {
+    object-fit: cover;
+    width: 600px;
+    height: 380px;
+    margin: 25px 35px;
+    border: 6px solid white;
+    transform: translateY(50px);
+    transition: all 1.5s ease-in-out; 
+    opacity: 0;    
+}
+.image.show {
+    transform: translateY(0);
+    transition: all 2s ease-in-out;  
+    opacity: 1; 
+}
+
+
+/*---------------------------------------------------------- Pagina PRESUPUESTO ---------------------------------------------------------*/
+
+.p-presupuesto {
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: clamp(15px, 2vw, 20px);
+    text-align: center;
+ }
+ .servicio {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 100%;
+     margin: 0 auto;
+     gap: 10px;
+ }
+ .servicio select {
+     width: 70%;
+     padding: 10px;
+     margin-bottom: 15px;
+     color: gray;
+     border: 1px solid rgb(205, 203, 203);
+     border-radius: 5px; 
+     font-size: clamp(10px, 2vw, 17px);  
+ }
+ .servicio option {
+     color: grey;
+     font-size: 15px;
+ }
+ .plazo {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 100%;
+     margin: 20px auto;
+     gap: 10px; 
+ }
+ .plazo input {
+     width: 40%;
+     padding: 10px;
+     border: 1px solid rgb(205, 203, 203);
+     border-radius: 5px; 
+     font-size: clamp(12px, 2vw, 17px);   
+ }
+ .extras {
+     display: inline-block;
+     justify-content: center;
+     align-items: center;
+     margin: 0 auto;
+     margin: 30px;
+     font-size: clamp(14px, 2vw, 17px); 
+ }
+ input[type="checkbox"] {
+     width: 20px;
+     height: 20px;
+     margin: 0 30px;
+     cursor: pointer; 
+ }
+ .presupuesto-total {
+     display: flex;
+     align-items: center;
+     text-align: center;
+     gap: 10px;
+     font-size: clamp(16px, 2vw, 18px); 
+     font-weight: bold;
+     margin: 50px auto;    
+ }
+ .total {   
+     border-radius: 5px;    
+     padding: 10px;
+     text-align: center;
+     font-weight: bold; 
+     font-size: clamp(13px, 2vw, 16px); 
+     color: black;
+     background-color: white;
+ }
+ .iva {
+     color: rgb(51, 51, 51); 
+     font-style: italic; 
+     font-weight: lighter;
+     font-size: clamp(13px, 2vw, 17px); 
+     padding: 0 20px;
+ }
 
 /* -------------------------------------------------------------
 ----------------------- Formulario ------------------------
@@ -296,7 +520,6 @@ h4 {
     color: grey; 
     font-style: italic;
 }
-
 .formulario textarea {
     width: 100%;
     padding: 10px;
@@ -313,7 +536,6 @@ h4 {
     text-align: center;
     font-size: clamp(14px, 2vw, 17px); 
 }
-
 .error, 
 .noSelected {
     color: red;
@@ -357,71 +579,32 @@ input.invalido, select.invalido {
 }
 
 
-/*------------------------------- Botón WhatsApp ---------------------------------- */
-
-.whatsapp {
-    position: fixed;
-    bottom: 180px;
-    right: 5px;
-    z-index: 98;
-}
-
-
-/* ---------------------------------------------------------------------------Footer---------------------------------------------------------------------------------------*/
-footer{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-    min-width: 100%;
-    align-items: center;
-    background-image: linear-gradient(#c7c7c7, black);
-    color: white;
-    text-shadow: 1px 1px 3px black ;
-    text-align: center;
-    font-size: clamp(12px, 2vw, 14px);
-} 
-footer a{
-    color: white;
-} 
-.pp {
-    margin: 10px auto;
-    color: white;
-    font-weight: normal;
-    font-size: clamp(8px, 2vw, 13px);
-    transition: all .5s ease-in-out;
-}
-.pp a:hover {
-    color:  rgb(192, 56, 7);
-    text-decoration: underline;
-}
-.redes {
-    line-height: 20px;   
-}
-.redes img {
-    width: 30px;
-    height: 30px;
-    box-shadow: 2px 2px 2px black;
-}
-.telefono-email {
-    display: flex;
-    gap: 10px;
-}
-.derechos {
-    font-weight: normal;
-    font-size: clamp(10px, 1vw, 12px);
-}
-
 /*----------------- Pagina CONTACTO --------------------------------------------*/
 
-.container1 {
-    width: 75%;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    margin: 20px auto;
-    gap: 10px;
+.parafo-contacto {
+    max-width: 70%;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    
+    margin: 0 auto;
+    padding: 20px;
+    font-size: clamp(13px, 2vw, 18px);
+    line-height: 35px;
+    color: black;
+}
+
+.container1 {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 20px auto;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: linear-gradient(to right, black, rgb(72, 72, 72));
 }
 .horario {
     display: flex;
@@ -429,57 +612,53 @@ footer a{
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    width: 100%;
-    padding: 20px;
+    width: 90%;
+    padding: 10px;
     gap: 10px;
-    color: black;
+    color: white;
     text-align: center;
-    line-height: 35px;
-    font-size: clamp(20px, 2vw, 22px);
-    border: 3px solid black;
-    background-image: linear-gradient(to right, white, rgb(199, 199, 199));
-    box-shadow: 3px 2px 3px black;
-    transform: perspective(1500px) translate3d(15px, 0, 10px) rotateY(20deg);
-    
-    transition: all 1s ease-in-out;
+    line-height: 15px;
+    font-size: clamp(12px, 2vw, 18px); 
 }
-.contacto {
+.horario hr {
+    width: 50%;
+    height: 3px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.direccion {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     padding: 17px;
-    gap: 20px;
-    line-height: 35px;
-    color: black;
-    text-align: center;
-    border: 3px solid black;
-    background-image: linear-gradient(to right, white, rgb(199, 199, 199));
-    font-size: clamp(20px, 2vw, 22px);
-    box-shadow: 3px 2px 3px black;
-    transform: perspective(1500px) translate3d(15px, 0, 10px) rotateY(-20deg);
-    transition: all 1s ease-in-out;
-}
-.movil {
-    padding: 10px;
     gap: 10px;
+    line-height: 25px;
+    color: white;
+    text-align: center;
+    font-size: clamp(12px, 2vw, 18px);
+}
+.inst-foto {
+    width: 300px;
+    height: 190px;
+    box-shadow: 2px 2px 2px black;
+    object-fit: cover;
 }
 .correo {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 .correo a {
-    color: black;
-    font-size: clamp(20px, 2vw, 22px);
+    color: white;
+    text-decoration: none;
+    font-size: clamp(12px, 2vw, 18px);
     cursor: pointer;
 }
-.horario:hover, .contacto:hover {
-    transform:scale(1);
-    transition: all 1s ease-in-out;
-}
+
 
 /*----------------------------------------------------- GOOGLE MAPS ------------------------------ */
 
@@ -495,14 +674,15 @@ footer a{
 #map {    
     height: 450px;
     margin: 0 auto;
-    width: 85%;
+    width: 80%;
 }
 .how-arrive {
-    width: 150px;
+    width: 120px;
     position: absolute;
     z-index: 4;
-    top: 52%;
-    left: 36%;
+    top: 53%;
+    left: 40%;
+    padding: 3px;   
 }
 #google button {
     background-color: #fff;
@@ -513,21 +693,22 @@ footer a{
     font-family:sans-serif;
     font-size: 13px;
     font-weight: bold;
-    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
   }
 #google button:hover {
     background-color: #ddd;
-  }
+}
 #google button:focus {
     outline: none;
-  }
+}
 .marca {
     text-align: center;
     font-size: 17px;   
 }
 #panel {
     width: auto;
-    max-width: 15%;
+    max-width: 20%;
     height: 450px;
     padding: 10px;
     overflow: auto;
@@ -538,132 +719,6 @@ footer a{
 }
 
 
-/*---------------------------------------------------------- Pagina GALERIA ---------------------------------------------------------*/
-
-.text-servicio {
-    text-transform: uppercase;
-    color: black;
-    padding: 50px;
-    transform: scaleX(0.2);
-    opacity: 0;
-    transition: all 1.5s ease-in-out;   
-}
-.text-servicio.show {
-    transform: scaleX(1);
-    opacity: 1;
-    transition: all 1.5s ease-in-out;
-    text-shadow: 2px 2px 2px white;
-}
-.galeria { 
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0px auto;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: black;
-}
-.image {
-    object-fit: cover;
-    width: 600px;
-    height: 380px;
-    margin: 25px 35px;
-    border: 6px solid white;
-    transform: translateY(50px);
-    transition: all 1.5s ease-in-out; 
-    opacity: 0;    
-}
-.image.show {
-    transform: translateY(0);
-    transition: all 2s ease-in-out;  
-    opacity: 1; 
-}
-
-
-/*---------------------------------------------------------- Pagina PRESUPUESTO ---------------------------------------------------------*/
-
-.p-presupuesto {
-   margin-bottom: 20px;
-   padding: 20px;
-   font-size: clamp(15px, 2vw, 20px);
-   text-align: center;
-}
-.servicio {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-    gap: 10px;
-}
-.servicio select {
-    width: 70%;
-    padding: 10px;
-    margin-bottom: 15px;
-    color: gray;
-    border: 1px solid rgb(205, 203, 203);
-    border-radius: 5px; 
-    font-size: clamp(10px, 2vw, 17px);  
-}
-.servicio option {
-    color: grey;
-    font-size: 15px;
-}
-.plazo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin: 20px auto;
-    gap: 10px; 
-}
-.plazo input {
-    width: 40%;
-    padding: 10px;
-    border: 1px solid rgb(205, 203, 203);
-    border-radius: 5px; 
-    font-size: clamp(12px, 2vw, 17px);   
-}
-.extras {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin: 30px;
-    font-size: clamp(14px, 2vw, 17px); 
-}
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin: 0 30px;
-    cursor: pointer; 
-}
-.presupuesto-total {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    font-size: clamp(16px, 2vw, 18px); 
-    font-weight: bold;
-    margin: 50px auto;    
-}
-.total {   
-    border-radius: 5px;    
-    padding: 10px;
-    text-align: center;
-    font-weight: bold; 
-    font-size: clamp(13px, 2vw, 16px); 
-    color: black;
-    background-color: white;
-}
-.iva {
-    color: rgb(51, 51, 51); 
-    font-style: italic; 
-    font-weight: lighter;
-    font-size: clamp(13px, 2vw, 17px); 
-    padding: 0 20px;
-}
 
 
 /*--------------------------------------------
@@ -696,7 +751,7 @@ input[type="checkbox"] {
         top: 60%;
         right: 0;
         gap: 20px;
-        left: 1px;
+        left: 1%;
         width: 100%;
         justify-content: center;
         align-items: center;
@@ -707,6 +762,9 @@ input[type="checkbox"] {
     .check-menu:checked + .nav-links {
         display: flex;
     } 
+    .contact {
+        display: none;
+    }
     .formulario {
         max-width: 95%;
     }
@@ -747,23 +805,21 @@ input[type="checkbox"] {
     .nav-links {
         display: none;
         position: absolute;
-        top: 70%;
-        right: 0;
+        top: 50%;
+        right: 3%;
         gap: 20px;
-        padding: 0px;
+        left: 0;
         width: 100%;
         justify-content: center;
+        align-items: center;
     }
+   
     .label-check {
         display: block; 
         margin-top: 0px;
         padding: 3px;
     }
      
-    .direccion-p {
-        margin: 5px auto;
-        line-height: 15px;
-    }
     .extras {
         display: flex;
         flex-direction: column;
@@ -775,13 +831,6 @@ input[type="checkbox"] {
     .botones {
         margin-bottom: 20px;
     }
-   
-    .containerI {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 20px auto;
-    }
-
     .presupuesto-total {
         display: flex;
         flex-direction: column;
@@ -795,13 +844,12 @@ input[type="checkbox"] {
         flex-direction: column;
         margin: 20px auto;
         justify-content: center;
-        align-items: center;
-        background-color: black;
+        align-items: center;   
     }
     .image {
-        width: 300px;
-        height: 180px; 
-        margin-left: 50px; 
+        width: 500px;
+        height: 280px; 
+   
     }  
     .info {
         display: flex;
@@ -815,6 +863,10 @@ input[type="checkbox"] {
         background: rgba(0, 0, 0, 0.625);
         border-radius: 10px;
         font-size: clamp(15px, 2vw, 20px)
+    }
+    .inst-foto {
+        width: 160px;
+        height: 90px;
     }
 
 }
