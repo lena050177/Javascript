@@ -1,6 +1,6 @@
 //-------------------- Scroll de header ----------
 
-const navbar = document.querySelector (".navbar")
+const navbar = document.querySelector ("header")
 const logo = document.querySelector (".logo")
 
 function scrollNavbar () {

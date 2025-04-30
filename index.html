@@ -9,28 +9,25 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
         </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body> 
-    <header class="navbar"> 
-        <div>
+    <header>    
             <img class="logo" src="./assets/images/icons/logotip.svg" alt="logo tiptop" width="200" height="200">
-        </div>
-        <div>
+        
             <h1>TAPICERÍA AUTOMÓVIL</h1>
-        </div>
-       
-        <input type="checkbox" id="check-menu" class="check-menu">
-        <ul class="nav-links">
-            <li><a href="./index.html" >INICIO</a></li>              
-            <li><a href="./views/galeria.html">GALERÍA</a></li>               
-            <li><a href="./views/presupuesto.html" >PRESUPUESTO</a></li>            
-            <li><a href="./views/contacto.html">CONTACTO</a></li> 
-        </ul>            
-        <label for="check-menu" class="label-check">
-            <img src="./assets/images/icons/menu.svg" alt="icono menu hamburgesa" width="50" height="50">
-        </label> 
-             
+        
+            <input type="checkbox" id="check-menu" class="check-menu">
+            <ul class="nav-links">
+                <li><a href="./index.html" >INICIO</a></li>              
+                <li><a href="./views/galeria.html">GALERÍA</a></li>               
+                <li><a href="./views/presupuesto.html" >PRESUPUESTO</a></li>            
+                <li><a href="./views/contacto.html">CONTACTO</a></li> 
+            </ul>            
+            <label for="check-menu" class="label-check">
+                <img src="./assets/images/icons/menu.svg" alt="icono menu hamburgesa" width="50" height="50">
+            </label>             
     </header>
 
     <main>
@@ -42,43 +39,107 @@
                 <p> Nuestro compromiso es devolverle a tu vehículo el confort, la estética y la elegancia que se merece.</p>
             </div>
         </section>
-
-        <section>
-            <h2>Últimas noticias sobre tapicería del automóvil</h2>
-            <div class="noticias">
-                todavia no tengo noticias
-            </div>
+        <section class="contenido">
+            <h2>¿Quiénes somos?</h2>
+            <hr>
+            <p>En TipTop Tapicería, profesionales apasionados por la restauración y personalización de vehículos. En nuestro taller, cada vehículo es tratado con el máximo cuidado y atención. Ya sea que necesites un tapizado nuevo, la restauración de asientos, volantes o cualquier otro elemento interior, estamos aquí para ayudarte a transformar tu vehículo en una obra maestra. Nos esforzamos por superar tus expectativas y brindarte un servicio excepcional en cada paso del proceso.</p>
         </section>
    
-        <section>
+        <section class="servicios">
             <h2> 
                 <a href="./views/galeria.html">Nuestros Servicios</a>
             </h2> 
-            <hr>  
-            <div class="containerS" >        
-            
-                <div class="carusel">
-                    <div id="slides">
-                        <img class="carusel-img" src="./assets/images/galeria/asientosporsche3.jpg" alt="Asientos Porsche restaurados">
-                        <img class="carusel-img" src="./assets/images/galeria/asiento-reparado1.jpg" alt="Asiento reparado">
-                        <img src="./assets/images/galeria/volante1.jpg" alt="Volante">
-                        <img class="carusel-img" src="./assets/images/galeria/volante2.jpg" alt="Volante" width="700" height="400">
-                        <img class="carusel-img" src="./assets/images/galeria/salpicadero-reparado.jpg" alt="Salpicadero reparado"  width="700" height="400">
-                        <img class="carusel-img" src="./assets/images/galeria/asientos-barco2.jpg" alt="Asientos de barco restaurados" width="1600" height="1200">
-                    </div>
+            <hr> 
+            <div class="container text-center" style="max-width: 80%;">
+                <div class="row">
+                  <div class="col" style="font-weight: bold;">
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" style="object-fit: cover">
+                                <img src="./assets/images/galeria/asientosporsche3.jpg" class="d-block w-100" alt="asientos porsche" style="object-fit: cover"   width="700" height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>DISEÑO PERSONALIZADO</h5>
+                                    <p>Diseñamos y fabricamos tapizados a medida para tu coche, barco o moto.</p>
+                                </div>
+                            </div>
+                                <div class="carousel-item" style="object-fit: cover">
+                                <img src="./assets/images/galeria/volante1.jpg" class="d-block w-100" alt="Volante" style="object-fit: cover"  width="700" height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>RESTAURACIÓN DE VOLANTES</h5>
+                                    <p>Reparamos y restauramos volantes de todo tipo, devolviéndoles su aspecto original.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="object-fit: cover">
+                                <img src="./assets/images/galeria/asiento-reparado1.jpg" class="d-block w-100" alt="asiento-reparado" style="object-fit: cover"  width="700" height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>RECONSTRUCCIÓN DE ASIENTOS</h5>
+                                    <p>Reparamos y reconstruimos asientos.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="object-fit: cover">
+                                <img src="./assets/images/galeria/techo.jpg" class="d-block w-100" alt="techo" style="object-fit: cover"  width="700" height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>TAPIZADO DE TECHOS</h5>
+                                    <p>Reparamos y restauramos techos de vehículos.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="object-fit: cover">
+                                <img src="./assets/images/galeria/salpicadero-reparado.jpg" class="d-block w-100" alt="salpicadero-reparado" style="object-fit: cover"  width="700" height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>REPARACIÓN DE SALPICADEROS</h5>
+                                    <p>Reparamos y restauramos salpicaderos de vehículos.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="object-fit: cover">
+                                <img src="./assets/images/galeria/asientos-barco2.jpg" class="d-block w-100" alt="asiento-barco" style="object-fit: cover"  width="700" height="550">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>REPARACIÓN DE ASIENTOS DE BARCOS</h5>
+                                    <p>Reparamos y restauramos asientos de barcos y yates.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                  </div>
                 </div>
-                <div class="servicios">
-                    <ul>
-                        <li>DISEÑO PERSONALIZADO</li>
-                        <li>RESTAURACIÓN DE VOLANTES</li>
-                        <li>RECONSTRUCCIÓN DE ASIENTOS</li>
-                        <li>REPARACIÓN DE TECHOS</li>
-                        <li>TAPIZADO DE BARCOS</li>
-                    </ul>
+              <div class="row consejos">
+                <div class="col">
+                    <h4>¿Cómo elegir el tapizado adecuado para tu coche?</h4>
+                    <p>El tapizado de un coche no solo afecta a su estética, sino también a su confort y durabilidad. En nuestro taller te damos algunos consejos para elegir el mejor tapizado para tu vehículo.</p>
                 </div>
+                <div class="col">
+                    <h4>Restauración de coches clásicos</h4><br>
+                    <p>La restauración de coches clásicos es una tarea apasionante que requiere atención al detalle y un profundo conocimiento de los materiales y técnicas de tapicería.</p>
+                </div>
+                <div class="col">
+                    <h4>Consejos para mantener el tapizado en buen estado</h4>
+                    <p>El mantenimiento adecuado del tapizado de tu coche puede prolongar su vida útil y mantenerlo en óptimas condiciones. Te dejamos algunos consejos prácticos.</p>
+                </div>
+              </div>
             </div>
         </section>
 
+        <section class="contenido">
+            <h2>Noticias de automoción</h2>
+            <hr>
+            <div id="noticias" class="row"></div>
+        </section>
+  
         <section class="containerI">
             <div>
                 <h2><a href="./views/contacto.html">Contáctanos:</a></h2>
@@ -180,10 +241,8 @@
             <p>© 2025 Tip Top Taller</p>           
         </div>
     </footer>
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="./js/jquery.slides.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/slider.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./js/noticias.js"></script>
+    <script src="./js/script.js"></script>  
 </body>
 </html>

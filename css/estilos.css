@@ -18,13 +18,15 @@ main {
 /* ---------------------------------------------------------------- -
 ---------------------------------- Header -------------------------
 -------------------------------------------------------------------*/ 
-.navbar {    
+header {    
     position: fixed;
     display: flex;
     width: 100%;
+    margin: 0 auto;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 110px;
     z-index: 100;  
     background-color: rgba(0, 0, 0, 0.645);
     filter: drop-shadow(0px 8px 4px rgba(0,0,0,1));
@@ -39,7 +41,7 @@ header.nav-scroll {
 
 .logo {  
     width: 160px;
-    height: 95px;
+    height: 100px;
     border-radius: 5px;
     object-fit: cover;
     transition: all 1.5s ease-in-out;
@@ -49,26 +51,27 @@ header.nav-scroll {
     transition: all 1.5s ease-in-out;
 }
 
-h1 {
-    font-size: clamp(5px, 3vw, 30px);
+header h1 {
+    font-size: 2.8vw;
     color: white;
     font-weight: bolder;
     letter-spacing: 5px;
     text-align: center;
-    transform: scale3d(1.5, 1.2, 0.3);
+    transform: scale3d(1.3, 1.3, 0.5);
 }
-.nav-links {
-    margin-right: 30px;
+.nav-links {  
+    margin-right: 40px; 
+    padding-top: 10px;
     color: #fff;
     list-style: none;   
     line-height: 20px;
-    transform: scale3d(1.5, 1.2, 0.3);
+    transform: scale3d(1.3, 1.2, 0.3);
 }
 .nav-links a {  
     text-decoration: none;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
     color:#fff; 
-    font-size: clamp(8px, 2vw, 12px);   
+    font-size: clamp(6px, 2vw, 14px);   
 }
 .nav-links a:hover {
     color: rgb(192, 56, 7);
@@ -79,20 +82,19 @@ hr {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    width: 120px;
-    height: 3px;
+    width: 280px;
+    height: 5px;
     margin-bottom: 10px;
 }
 
 /*--------------------------------------------------------------- Menu hamburgesa -------------------------------
 -------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------------------------------*/
 .check-menu {
    display: none;  
 }
 .label-check {
-    display: none;
-    
+    display: none;   
 }
 /*--------------------------------------------------------------------
 --------------------------------------Main--------------------------- 
@@ -101,7 +103,8 @@ h2 {
     text-align: center;
     padding: 20px;
     font-weight: bolder;
-    font-size: clamp(18px, 3vw, 35px);
+    font-size: clamp(20px, 3vw, 35px);
+    letter-spacing: 2px;  
 }
 
 h2 a {
@@ -123,23 +126,38 @@ h4 {
     padding: 10px;
     font-size: clamp(14px, 2vw, 20px);
     font-weight: bold;
+    
 }
 .text-top.show {
     text-shadow: 2px 2px 2px rgb(94, 94, 94);
     transition: all 0.9s ease-in-out;
     transform: scale(1.2);
 }
+
+/* -------------------------------------------------------------------------- INICIO ----------------------------------------------------- */
+
 .contenido {
     width: 95%;
-    margin: 0 auto;
-    
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+}
+.contenido p {
+    width: 80%;
+    margin: 20px auto;
+    text-align: justify;
+    text-wrap:break-word;
+    padding: 20px;
+    font-size: clamp(10px, 2vw, 18px);
+    color: black;
 }
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 8%;
+    align-items: center; 
+    margin-top: 8%;  
     color: rgb(192, 56, 7);   
     text-shadow: 1px 1px 3px black;
     background: url(./../assets/images/inicio.jpg) top/cover no-repeat;  
@@ -159,8 +177,42 @@ h4 {
     background: rgba(0, 0, 0, 0.625);
     border-radius: 10px;  
 }
+.servicios {
+    max-width: 100%;
+    padding-bottom: 30px;
+    background-color: rgb(26, 26, 26); 
+}
+.servicios h2 a {
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: clamp(20px, 3vw, 35px);
+    letter-spacing: 3px; 
+}
+.consejos {
+    color: white;
+    gap: 30px;
+    padding: 20px;   
+}
 
-/* -------------------------------------------------------------------------- INICIO ----------------------------------------------------- */
+#noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content:center;
+    align-items: start;
+    text-align:justify;
+    gap: 50px;
+    margin: 20px auto;
+    
+}
+.noticia {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(222, 221, 221);
+    border-radius: 3px;
+    box-shadow: 3px 2px 2px black;
+    
+}
 .containerI {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -182,33 +234,6 @@ h4 {
 }
 .google-maps {
     width: 95%;  
-}
-.containerS {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: repeat(2 1fr);
-    justify-content: space-between;
-    margin: 30px auto; 
-    background-color: black;
-    mask-image: linear-gradient(rgba(190,190,190,1) 95%, transparent);
-    filter: drop-shadow(0px 8px 4px rgba(190,190,190,1));
-}
-.servicios {
-    display: flex;
-    font-size: clamp(8px, 1vw, 18px);
-    color: white;
-    justify-content: start;
-    align-items: center;  
-}
-.servicios ul {
-    font-weight: bolder;
-    flex-wrap: wrap;
-    list-style: none;
-    line-height: 50px;
-    letter-spacing: 5px;
-    list-style: square;
 }
 
 /* -------------------------------------------------------------
@@ -331,139 +356,6 @@ input.invalido, select.invalido {
     border: 1px solid black;
 }
 
-/* ------------------------------------------------------- NOTICIAS ------------------------------------------- */
-.noticias {
-    width: 85%;
-    height: auto;
-    margin: 20px auto;
-    background-color: white;
-    border: 2px solid rgb(31, 31, 31);
-}
-
-/*----------------------------------------------------- SLIDER ---------------------------*/
-
-.carusel {
-    width: 700px;
-    margin: 0 auto;
-    margin-left: 20px;
-    padding-bottom: 10px;
-    border-radius: 3px 3px 3px 3px;
-    border: 10px solid #000000;
-    color: transparent;
-    background-color:rgba(252, 251, 251, 0.869);
-    transform: perspective(1500px) translate3d(10px, 0, 20px) rotateY(10deg);
-    }
-
-  #slides {
-    display: none
-  }
-  .carusel-img {
-    width: 500px;
-    height: 375px;
-    object-fit: cover;
-  }
-
-  #slides .slidesjs-navigation {
-    margin-top:5px;
-  }
-
-  a.slidesjs-next,
-  a.slidesjs-previous,
-  a.slidesjs-play,
-  a.slidesjs-stop {
-    background-image: url(./../assets/images/btns-next-prev.png);
-    background-repeat: no-repeat;
-    display:flex;
-    margin-left: 20px;
-    width:12px;
-    height: 18px;
-    overflow: hidden;
-    text-indent: -9999px;
-    float: left;
-    margin-right:50px;
-  }
-
-  a.slidesjs-next {
-    margin-right:10px;
-    background-position: -12px 0;
-  }
-
-  a:hover.slidesjs-next {
-    background-position: -12px -18px;
-  }
-
-  a.slidesjs-previous {
-    background-position: 0 0;
-  }
-
-  a:hover.slidesjs-previous {
-    background-position: 0 -18px;
-  }
-
-  a.slidesjs-play {
-    width:15px;
-    background-position: -25px 0;
-  }
-
-  a:hover.slidesjs-play {
-    background-position: -25px -18px;
-  }
-
-  a.slidesjs-stop {
-    width:18px;
-    background-position: -41px 0;
-  }
-
-  a:hover.slidesjs-stop {
-    background-position: -41px -18px;
-  }
-
-  .slidesjs-pagination {
-    margin: 7px 0 0;
-    float: right;
-    list-style: none;
-  }
-
-  .slidesjs-pagination li {
-    float: left;
-    margin: 0 1px;
-  }
-
-  .slidesjs-pagination li a {
-    display: flex;
-    margin-right: 20px;
-    width: 13px;
-    height: 0;
-    padding-top: 13px;
-    background-image: url(./../assets/images/pagination.png);
-    background-position: 0 0;
-    float: left;
-    overflow: hidden;
-  }
-
-  .slidesjs-pagination li a.active,
-  .slidesjs-pagination li a:hover.active {
-    background-position: 0 -13px
-  }
-
-  .slidesjs-pagination li a:hover {
-    background-position: 0 -26px
-  }
-
-  #slides a:link,
-  #slides a:visited {
-    color: black
-  }
-
-  #slides a:hover,
-  #slides a:active {
-    color: #9e2020
-  }
-
-  .navbar {
-    overflow: hidden
-  }
-
 
 /*------------------------------- Botón WhatsApp ---------------------------------- */
 
@@ -485,10 +377,9 @@ footer{
     align-items: center;
     background-image: linear-gradient(#c7c7c7, black);
     color: white;
-    font-weight: bold;
     text-shadow: 1px 1px 3px black ;
     text-align: center;
-    font-size: clamp(13px, 2vw, 17px);
+    font-size: clamp(12px, 2vw, 14px);
 } 
 footer a{
     color: white;
@@ -523,7 +414,7 @@ footer a{
 
 /*----------------- Pagina CONTACTO --------------------------------------------*/
 
-.container {
+.container1 {
     width: 75%;
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -780,7 +671,7 @@ input[type="checkbox"] {
 ----------------------------------------------*/
 
 @media (max-width: 1024px) {
-    .navbar {
+    header {
         display: flex;
         margin: 0 auto;
         height: 90px;
@@ -797,15 +688,15 @@ input[type="checkbox"] {
     }    
     .label-check {
         display: block; 
-        
+        margin-right: 10px;
     }
     .nav-links {
         display: none;
         position: absolute;
-        top: 75%;
+        top: 60%;
         right: 0;
         gap: 20px;
-        left: 10px;
+        left: 1px;
         width: 100%;
         justify-content: center;
         align-items: center;
@@ -815,28 +706,6 @@ input[type="checkbox"] {
     }     
     .check-menu:checked + .nav-links {
         display: flex;
-    }
-  
-    .carusel {
-        width: 400px;
-    }
-    a.slidesjs-next,
-    a.slidesjs-previous,
-    a.slidesjs-play,
-    a.slidesjs-stop {
-
-      margin-left: 50px;
-    }
-    .slidesjs-pagination li a {
-        display: flex;
-        margin-right: 35px;
-    }
-    .servicios ul {
-        font-weight: bolder;
-        flex-wrap: wrap;
-        list-style: none;
-        line-height: 20px;
-        list-style: square;
     } 
     .formulario {
         max-width: 95%;
@@ -859,11 +728,11 @@ input[type="checkbox"] {
 
  @media (max-width: 768px) {
 
-    .navbar {
+    header {
         display: flex;
         align-items: start;
         gap: 0;
-        height: 60px;
+        height: 70px;
     }
     .logo {
         top: 0px;
@@ -880,7 +749,7 @@ input[type="checkbox"] {
         position: absolute;
         top: 70%;
         right: 0;
-        gap: 3px;
+        gap: 20px;
         padding: 0px;
         width: 100%;
         justify-content: center;
@@ -889,7 +758,6 @@ input[type="checkbox"] {
         display: block; 
         margin-top: 0px;
         padding: 3px;
-     
     }
      
     .direccion-p {
@@ -907,38 +775,13 @@ input[type="checkbox"] {
     .botones {
         margin-bottom: 20px;
     }
-    .container {
-        width: 70%;
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 50px auto;
-        justify-content: center;
-        align-items: center;
-    }
+   
     .containerI {
         display: grid;
         grid-template-columns: 1fr;
         margin: 20px auto;
     }
-    .containerS {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-    .carusel {
-        width: 350px;
-        margin-left: 0;
-    }
-    .servicios {
-        max-width: 80%;
-        padding: 20px;
-    }
-    .servicios li {
-        transform: none;
-        letter-spacing: 1px;
-    }
+
     .presupuesto-total {
         display: flex;
         flex-direction: column;
