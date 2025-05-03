@@ -40,8 +40,10 @@ header.nav-scroll {
 }
 
 .logo {  
+    margin-top: 0;
+    padding: 0;
     width: 160px;
-    height: 100px;
+    height: 110px;
     border-radius: 5px;
     object-fit: cover;
     transition: all 1.5s ease-in-out;
@@ -52,16 +54,15 @@ header.nav-scroll {
 }
 
 header h1 {
-    font-size: 2.8vw;
     color: white;
     font-weight: bolder;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-align: center;
     transform: scale3d(1.3, 1.3, 0.5);
+    font-size: clamp(11px, 3vw, 40px);
 }
 .nav-links {  
-    margin-right: 40px; 
-    padding-top: 10px;
+    padding: 20px;
     color: #fff;
     list-style: none;   
     line-height: 20px;
@@ -103,9 +104,9 @@ h2 {
     text-align: center;
     padding: 20px;
     font-weight: bolder;
-    font-size: clamp(20px, 3vw, 35px);
+    font-size: clamp(16px, 3vw, 35px);
     letter-spacing: 2px;  
-    line-height: 60px;
+    line-height: 50px;
 }
 
 h2 a {
@@ -735,34 +736,33 @@ input.invalido, select.invalido {
     .logo {
         top: 0px;
         width: 115px;
-        height: 85px;
+        height: 90px;
     }
-    h1 {    
-        top: 0px;
-        padding: 0px;
-        font-size: 20px;
-    }    
+       
     .label-check {
         display: block; 
-        margin-right: 10px;
+        margin-right: 5px;
     }
     .nav-links {
         display: none;
-        position: absolute;
-        top: 60%;
-        right: 0;
-        gap: 20px;
-        left: 1%;
-        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
         justify-content: center;
+        text-align: justify;
         align-items: center;
-    } 
-    h2 {
-        padding: 10px;
-    }     
+        position: absolute;
+        top: 90%;
+        right: 42%;
+        width: 18%;
+        height: 130%;
+        border-radius: 10px;
+        background-color: rgba(11, 11, 11, 0.674);
+    }
+    
+    
     .check-menu:checked + .nav-links {
         display: flex;
-    } 
+    }
     .contact {
         display: none;
     }
@@ -790,38 +790,17 @@ input.invalido, select.invalido {
 
  @media (max-width: 768px) {
 
-    header {
-        display: flex;
-        align-items: start;
-        gap: 0;
+    header { 
         height: 70px;
     }
     .logo {
         top: 0px;
-        width: 70px;
-        height: 55px;
+        width: 80px;
+        height: 65px;
     }
-    h1 {
-        letter-spacing: 1px;
-        margin-top: 15px;
-        font-size: 12px;
-    }
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 50%;
-        right: 3%;
-        gap: 20px;
-        left: 0;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-   
-    .label-check {
-        display: block; 
-        margin-top: 0px;
-        padding: 3px;
+    header h1 {
+        margin-top: 10px;
+        padding-left: 10px;
     }
      
     .extras {
@@ -851,8 +830,8 @@ input.invalido, select.invalido {
         align-items: center;   
     }
     .image {
-        width: 450px;
-        height: 280px; 
+        width: 350px;
+        height: 220px; 
    
     }  
     .info {
