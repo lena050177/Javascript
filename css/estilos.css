@@ -759,7 +759,6 @@ input.invalido, select.invalido {
         background-color: rgba(11, 11, 11, 0.674);
     }
     
-    
     .check-menu:checked + .nav-links {
         display: flex;
     }
@@ -798,11 +797,7 @@ input.invalido, select.invalido {
         width: 80px;
         height: 65px;
     }
-    header h1 {
-        margin-top: 10px;
-        padding-left: 10px;
-    }
-     
+  
     .extras {
         display: flex;
         flex-direction: column;
