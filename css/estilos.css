@@ -63,6 +63,7 @@ header h1 {
 }
 .nav-links {  
     padding: 20px;
+    margin-top: 8px;
     color: #fff;
     list-style: none;   
     line-height: 20px;
@@ -208,7 +209,7 @@ h6 {
     border: 1px solid black;
 }
 .carousel-inner {
-    border: 15px solid white;
+    border: 10px double white;
     border-radius: 3px;
 }
 .carousel-caption {

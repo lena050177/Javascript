@@ -1,17 +1,30 @@
 
 let destination = {lat:36.5142763, lng: -4.8696375};
 
-function initMap() {
-
+let map = document.getElementById("map");
+async function initMap() {
+  const { Map } = await google.maps.importLibrary("maps");
+  map = new Map(document.getElementById("map"), {
+    center: destination,
+    zoom: 18,
+    mapId: "DEMO_MAP_ID",
+  });
+    map.setOptions({disableDefaultUI: true});
     navigator.geolocation.getCurrentPosition(function(position) {
-          
-        let origin = new google.maps.LatLng(parseFloat(position.coords.latitude), parseFloat(position.coords.longitude));
+        let origin = new google.maps.LatLng(Number(position.coords.latitude), Number(position.coords.longitude));
     
         createMap(origin, destination);
     });
 }
 
-function createMap(origin, destination) {
+initMap();
+
+
+
+    
+
+
+async function createMap(origin, destination) {
     var mapData = {
     zoom: 18,
     center: destination,
@@ -19,14 +32,17 @@ function createMap(origin, destination) {
     }
       
     var map = new google.maps.Map(document.getElementById('map'), mapData);
+    map.setOptions({disableDefaultUI: true});
     var originMarker = new google.maps.Marker({
         map: map,
         position: origin,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
         });           
      var destinationMarker = new google.maps.Marker({
         map: map,
         position: destination,
-        draggable: true
+        draggable: true,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
     var howArrive = document.getElementById('how-arrive');
