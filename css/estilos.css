@@ -186,6 +186,9 @@ h6 {
     background: rgba(0, 0, 0, 0.625);
     border-radius: 10px;  
 }
+.info p {
+    line-height: 25px;
+}
 .servicios {
     max-width: 100%;
     padding-bottom: 30px;
