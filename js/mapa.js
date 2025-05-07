@@ -7,21 +7,17 @@ async function initMap() {
   map = new Map(document.getElementById("map"), {
     center: destination,
     zoom: 18,
-    mapId: "DEMO_MAP_ID",
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
   });
     map.setOptions({disableDefaultUI: true});
     navigator.geolocation.getCurrentPosition(function(position) {
-        let origin = new google.maps.LatLng(Number(position.coords.latitude), Number(position.coords.longitude));
+        let origin = new google.maps.LatLng(parseFloat(position.coords.latitude), parseFloat(position.coords.longitude));
     
         createMap(origin, destination);
     });
 }
 
 initMap();
-
-
-
-    
 
 
 async function createMap(origin, destination) {
