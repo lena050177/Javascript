@@ -241,18 +241,19 @@ h6 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 30px auto;
-    padding: 10px 90px;
     font-weight: bold;
     font-size: clamp(16px, 3vw, 35px);
     color: white;
-    border: 2px solid white;
-    border-radius: 3px;
-    background-color: rgb(26, 26, 26); 
+    
 }
 .contact-btn a {
+    margin: 30px auto;
+    padding: 10px 90px;
     text-decoration: none;
     color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    background-color: rgb(26, 26, 26);
 }
 .contact-btn a:hover {
     color: rgb(192, 56, 7);  
