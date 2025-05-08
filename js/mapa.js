@@ -2,46 +2,53 @@
 let destination = {lat:36.5142763, lng: -4.8696375};
 
 let map = document.getElementById("map");
+
+
 async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
   map = new Map(document.getElementById("map"), {
     center: destination,
     zoom: 18,
+    mapId: "313c422e82ade0f413fa1af9",
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   });
     map.setOptions({disableDefaultUI: true});
     navigator.geolocation.getCurrentPosition(function(position) {
-        let origin = new google.maps.LatLng(parseFloat(position.coords.latitude), parseFloat(position.coords.longitude));
-    
+  let origin = new google.maps.LatLng(parseFloat(position.coords.latitude), parseFloat(position.coords.longitude));
+
         createMap(origin, destination);
     });
 }
 
 initMap();
 
-
 async function createMap(origin, destination) {
     var mapData = {
     zoom: 18,
     center: destination,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-      
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    mapId: "313c422e82ade0f413fa1af9",
+    };
+
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
     var map = new google.maps.Map(document.getElementById('map'), mapData);
     map.setOptions({disableDefaultUI: true});
-    var originMarker = new google.maps.Marker({
+
+    var originMarker = new AdvancedMarkerElement({
         map: map,
         position: origin,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-        });           
-     var destinationMarker = new google.maps.Marker({
+        });    
+
+     var destinationMarker = new AdvancedMarkerElement({
         map: map,
         position: destination,
         draggable: true,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        title: 'Taller Tip Top',       
         });
 
     var howArrive = document.getElementById('how-arrive');
+
     howArrive.addEventListener('click', function() {
       drawRoute(map, origin, destination);
       originMarker.setMap(null);
@@ -54,11 +61,12 @@ async function createMap(origin, destination) {
                 '<p class="marca">29603, Marbella</p>',
             });
 
-    destinationMarker.addListener ("click",()=>{
+    destinationMarker.addListener ("gmp-click",()=>{
         infoWindow.open({
             anchor:destinationMarker,
             mapa:map,
             shouldFocus:false,
+            mapId: "313c422e82ade0f413fa1af9",
             })
     })
 } 

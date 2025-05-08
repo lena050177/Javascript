@@ -112,7 +112,11 @@ h2 {
 
 h2 a {
     text-decoration: none;
-    color: black;
+    color: white;
+}
+h2 a:hover {
+    color: rgb(192, 56, 7);
+    
 }
 
 h3 {
@@ -201,6 +205,9 @@ h6 {
     font-size: clamp(20px, 3vw, 35px);
     letter-spacing: 3px; 
 }
+.servicios h2 a:hover {
+    color: rgb(192, 56, 7);
+}
 .servicios hr {
     color: white;
     width: 280px;
@@ -228,6 +235,27 @@ h6 {
     gap: 20px;
     padding: 15px;
     font-size: clamp(10px, 2vw, 18px);   
+}
+.contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px auto;
+    padding: 10px 90px;
+    font-weight: bold;
+    font-size: clamp(16px, 3vw, 35px);
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    background-color: rgb(26, 26, 26); 
+}
+.contact-btn a {
+    text-decoration: none;
+    color: white;
+}
+.contact-btn a:hover {
+    color: rgb(192, 56, 7);  
 }
 .noticia {
     display: flex;
@@ -314,7 +342,7 @@ footer p {
     margin: 10px auto;
     color: white;
     font-weight: normal;
-    font-size: clamp(8px, 2vw, 13px);
+    font-size: clamp(10px, 2vw, 13px);
     transition: all .5s ease-in-out;
 }
 .pp a:hover {
