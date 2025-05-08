@@ -105,7 +105,7 @@ h2 {
     text-align: center;
     padding: 20px;
     font-weight: bolder;
-    font-size: clamp(16px, 3vw, 35px);
+    font-size: clamp(16px, 3vw, 30px);
     letter-spacing: 2px;  
     line-height: 50px;
 }
@@ -390,14 +390,13 @@ footer p {
     margin: 0px auto;
     justify-content: center;
     align-items: center;
-    gap: 5px;
     background-color: black;
 }
 .image {
     object-fit: cover;
     width: 580px;
-    height: 380px;
-    margin: 25px 35px;
+    height: 350px;
+    margin: 30px auto;
     border: 6px solid white;
     transform: translateY(50px);
     transition: all 1.5s ease-in-out; 
