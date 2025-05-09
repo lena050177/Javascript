@@ -243,8 +243,7 @@ h6 {
     text-align: center;
     font-weight: bold;
     font-size: clamp(16px, 3vw, 35px);
-    color: white;
-    
+    color: white; 
 }
 .contact-btn a {
     margin: 30px auto;
@@ -261,12 +260,13 @@ h6 {
 .noticia {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     text-align: center;
     margin: 20px auto;
     padding: 20px;
     background-color: rgb(222, 221, 221);
+    border: 1px solid black;
     border-radius: 3px;
     box-shadow: 3px 2px 2px black;  
 }

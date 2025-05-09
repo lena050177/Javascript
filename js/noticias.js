@@ -37,14 +37,14 @@ async function realizarFetch(url) {
 
 realizarFetch('./assets/data/noticias.json')
     .then(data => {
-        data.forEach(noticia => {
+        data.forEach(data => {
             const noticiaDiv = document.createElement('div');
             noticiaDiv.classList.add('col', 'noticia');
             noticiaDiv.innerHTML = `
-                <img src="${noticia.foto}" alt="Imagen de la noticia">
-                <h6>${noticia.title}</h6>
-                <p>${noticia.description}</p>
-                <a href="${noticia.leer}" target="_blank">Leer más</a>
+                <img src="${data.foto}" alt="${data.title}">
+                <h6>${data.title}</h6>
+                <p>${data.description}</p>
+                <a href="${data.link}" target="_blank">Leer más</a>
             `;
             noticias.appendChild(noticiaDiv);
         })
