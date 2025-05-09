@@ -257,14 +257,22 @@ h6 {
 .contact-btn a:hover {
     color: rgb(192, 56, 7);  
 }
+
+#noticias {
+    max-width: 95%;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+}
 .noticia {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center;
+    text-wrap: balance;
     margin: 20px auto;
-    padding: 20px;
+    padding: 10px;
     background-color: rgb(222, 221, 221);
     border: 1px solid black;
     border-radius: 3px;
@@ -272,40 +280,22 @@ h6 {
 }
 .noticia p {
     width: 95%;
-    margin-top: 0;
+    margin-top: 5px;   
     font-size: clamp(12px, 2vw, 16px);
     color: black;
 }
-.container-contacto {
-    width: 90%;
+.caja {
     display: grid;
-    grid-template-columns: 40% 60%;
-    margin: 20px auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    flex-direction: column;
+    
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    border: 1px solid black;
 }
-.info-contacto {
-    display: flex;
-    flex-direction: column;   
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-    padding: 32px;
-    color: white;
-    font-size: clamp(12px, 2vw, 20px);
-    line-height: 35px;
-    background: linear-gradient(to right, black, rgb(72, 72, 72));
-    box-shadow: inset 0px 0px 10px black, 0px 0px 10px black;
-}
-.info-contacto a {
-    color: white;
-    text-decoration: none;
-}
-.google-maps {
-   max-width: 80%;
-}
+
 
 /*------------------------------- Botón WhatsApp ---------------------------------- */
 
