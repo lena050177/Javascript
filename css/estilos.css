@@ -284,12 +284,14 @@ h6 {
     font-size: clamp(12px, 2vw, 16px);
     color: black;
 }
+.noticia a {
+    font-size: clamp(10px, 2vw, 15px);
+}
 .caja {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     flex-direction: column;
-    
     margin: 0 auto;
     justify-content: center;
     align-items: center;
