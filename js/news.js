@@ -1,5 +1,5 @@
-
-let url = "https://newsapi.org/v2/everything?q=%28auto%29&from=2025-05-08&sortBy=popularity&language=es&apiKey=6388b7d01c394336b736f0119df39e97";
+let key = "6388b7d01c394336b736f0119df39e97"
+let url = "https://newsapi.org/v2/everything?q=auto&from=2025-05-08&sortBy=popularity&language=es&apiKey=6388b7d01c394336b736f0119df39e97";
 
 fetch(url)
   .then(response => {
@@ -10,7 +10,7 @@ fetch(url)
   })
 
   .then(data => {
-
+    console.log(data);
     let articles = data.articles;
     for (let i = 0; i < 3; i++) {
       let article = articles[i];
