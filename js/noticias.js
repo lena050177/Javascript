@@ -5,7 +5,7 @@
       access_key: '2810d9c10b50135ad47e3d07e41d5e49',
       languages: 'es',
       keywords: 'automovil',
-      limit: 3,
+      limit: 30,
       offset: 30,
     }
 
@@ -22,7 +22,7 @@
         for (let i = 0; i < 3; i++) {
           let article = articles[i];
           let articleElement = document.createElement('div');
-          articleElement.classList.add('col','noticia');
+          articleElement.classList.add('noticia');
 
           let title = document.createElement('h6');
           title.textContent = article.title;
