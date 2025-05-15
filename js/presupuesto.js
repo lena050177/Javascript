@@ -22,6 +22,8 @@ window.addEventListener ("scroll", scrollNavbar )
 
 
 
+
+
 // ------------------------------ Validacion datos personales
 
 const nameInput = document.getElementById("name");
